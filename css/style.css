@@ -1,0 +1,21 @@
+body {
+    background: #0A1C3A;
+}
+
+  .nav-item a:hover {
+    color: #FF770E !important;
+  }
+
+
+.banner-image {
+    background-image: url('../images/jokerr.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.btn-primary {
+    background-color: #FF770E !important;
+    border-color: #FF770E !important;
+ }
+
+    
