@@ -1,8 +1,12 @@
 body {
-    background: #0A1C3A;
+  background: #0A1C3A;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
-  .nav-item a:hover {
+.nav-item a:hover {
     color: #FF770E !important;
   }
 
@@ -17,7 +21,3 @@ body {
     background-color: #FF770E !important;
     border-color: #FF770E !important;
  }
-
- /* Bintong testing */
-
-    
