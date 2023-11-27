@@ -2,9 +2,9 @@ body {
     background: #0A1C3A;
 }
 
-  .nav-item a:hover {
-    color: #FF770E !important;
-  }
+.nav-item a:hover {
+color: #FF770E !important;
+}
 
 
 .banner-image {
@@ -18,4 +18,14 @@ body {
     border-color: #FF770E !important;
  }
 
-    
+<!-- CSS style for BookTicket page and WhatsOn page  -->
+
+.book-content-z {
+    padding: 500px;
+    border-color: black;
+}
+
+
+
+
+
