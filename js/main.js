@@ -1,4 +1,4 @@
-// main.js
+
 // JS for the main page 
 
 // JS for the BookTicket page 
