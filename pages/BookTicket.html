@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets</title>
 
-    <script src="../js/ZHC.js"></script>
+    <script src="../js/main.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
@@ -54,9 +54,51 @@
 </nav>
 
 <!-- Seat Select -->
-<div class="container ">
-    <p class="book-content-z">hello</p>
+<div class="container select-date-z">
+    <!-- Date Select -->
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#home"><span id="select-day1-z">day1</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#menu2"><span id="select-day2-z">day2</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#menu3"><span id="select-day3-z">day3</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#menu4"><span id="select-day4-z">day4</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#menu5"><span id="select-day5-z">day5</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#menu6"><span id="select-day6-z">day6</span></a>
+        </li>
+
+    </ul>
+  
+    <!-- Select seat and caculate price based on selected date -->
+    <div class="tab-content text-white">
+        <div class="tab-pane container active" id="home">
+            <div class="row ">
+                <div class="col-sm-6 container-sm border select-box-z">
+                    <div class="select-screen-z"></div>
+                </div>
+                <div class="col-sm-6 container-sm border">1
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="menu2">2</div>
+        <div class="tab-pane container fade" id="menu3">3</div>
+        <div class="tab-pane container fade" id="menu4">4</div>
+        <div class="tab-pane container fade" id="menu5">5</div>
+        <div class="tab-pane container fade" id="menu6">nnnnnnnnnnnnnn</div>
+    </div>
+    
 </div>
+
 
 
 <script type="text/javascript">
