@@ -1,6 +1,6 @@
 body {
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    min-height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  min-height: 100vh;
 }
 
 /* -------------------- NAVBAR CSS -------------------- */
@@ -51,23 +51,26 @@ body {
 /* Change navbar styling on small viewports */
 @media (max-width: 990px) {
   .navbar {
-      background: #0E141B;
+    background: #0E141B;
   }
 
-  .navbar .navbar-brand, .navbar .nav-link {
-      color: #fff;
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #fff;
+  }
 }
+
 /* --------------------------------------------------- */
 
 
 
 .banner-image {
-    background-image: url('../images/jokerr.png');
-    background-size: cover;
-    background-position: center center;
+  background-image: url('../images/jokerr.png');
+  background-size: cover;
+  background-position: center center;
 }
 
 .btn-primary {
-    background-color: #FF770E !important;
-    border-color: #FF770E !important;
- }
+  background-color: #FF770E !important;
+  border-color: #FF770E !important;
+}
