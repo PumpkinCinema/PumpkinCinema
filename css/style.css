@@ -55,7 +55,8 @@ body {
   }
 
   .navbar .navbar-brand, .navbar .nav-link {
-      color: #fff;
+    color: #fff;
+  }   
 }
 /* --------------------------------------------------- */
 
@@ -76,7 +77,7 @@ body {
 /* CSS for BookTicket and WhatsOn */
 
 .select-date-z{
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 .select-box-z {

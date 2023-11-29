@@ -5,56 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets</title>
 
-    <script src="../js/main.js"></script>
+    
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/style.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
 </head>
 <body >
 <!-- Navbar  -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container">
-        <a class="navbar-brand" href="#">PumpkinCinema</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="../images/logo.svg" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="mx-auto"></div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">What's On</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Membership</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Book Now</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Eat&Drink</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#"
+                                class="nav-link text-uppercase font-weight-bold">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 <!-- Seat Select -->
-<div class="container select-date-z">
+<div class=" select-date-z container ">
     <!-- Date Select -->
     <ul class="nav nav-pills">
         <li class="nav-item">
@@ -82,7 +82,7 @@
     <div class="tab-content text-white">
         <div class="tab-pane container active" id="home">
             <div class="row ">
-                <div class="col-sm-6 container-sm border select-box-z">
+                <div class="col-sm-6 container-sm select-box-z">
                     <div class="select-screen-z"></div>
                 </div>
                 <div class="col-sm-6 container-sm border">1
@@ -98,6 +98,7 @@
     </div>
     
 </div>
+
 
 
 
