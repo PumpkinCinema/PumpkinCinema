@@ -61,6 +61,7 @@ body {
 
 
 
+
 .banner-image {
     background-image: url('../images/jokerr.png');
     background-size: cover;
@@ -71,3 +72,37 @@ body {
     background-color: #FF770E !important;
     border-color: #FF770E !important;
  }
+
+/* CSS for BookTicket and WhatsOn */
+
+.select-date-z{
+  margin-top: 90px;
+}
+
+.select-box-z {
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+.select-seat-z {
+  background-image: url('../images/seat-unselected.png');
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.select-screen-z {
+  background-color: #fff;
+  height: 100px;
+  width: 70%;
+  margin: 15px 0;
+  transform: rotateX(-30deg);
+  /* 255, 255, 255, 0.7 */
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
+}
