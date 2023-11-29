@@ -5,99 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets</title>
 
-    <script src="../js/main.js"></script>
+    
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/style.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+   
 </head>
 <body >
 <!-- Navbar  -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container">
-        <a class="navbar-brand" href="#">PumpkinCinema</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="../images/logo.svg" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="mx-auto"></div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">What's On</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Membership</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Book Now</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Eat&Drink</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#"
+                                class="nav-link text-uppercase font-weight-bold">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 <!-- Seat Select -->
-<div class="container select-date-z">
+<div class=" select-date-z container ">
     <!-- Date Select -->
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="pill" href="#home"><span id="select-day1-z">day1</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu2"><span id="select-day2-z">day2</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu3"><span id="select-day3-z">day3</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu4"><span id="select-day4-z">day4</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu5"><span id="select-day5-z">day5</span></a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu6"><span id="select-day6-z">day6</span></a>
-        </li>
 
-    </ul>
-  
+
     <!-- Select seat and caculate price based on selected date -->
-    <div class="tab-content text-white">
-        <div class="tab-pane container active" id="home">
-            <div class="row ">
-                <div class="col-sm-6 container-sm border select-box-z">
-                    <div class="select-screen-z"></div>
-                </div>
-                <div class="col-sm-6 container-sm border">1
 
+        <div class="container text-white" >
+            <div class="row ">
+                <div class="col-sm-6 container-sm select-box-z">
+                    <br>
+                    <ul class="seat-showcase-z">
+                        <li>
+                          <div class="seat-z"></div>
+                          <small>Avaliable</small>
+                        </li>
+                        <li>
+                          <div class="seat-z seat-selected-z"></div>
+                          <small>Selected</small>
+                        </li>
+                        <li>
+                          <div class="seat-z seat-occupied-z"></div>
+                          <small>Occupied</small>
+                        </li>
+                      </ul>
+                      
+                      <div class="select-zone-z">
+                        <div class="select-screen-z"></div>
+                        <div class="seat-row-z" >
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                        </div>
+                    
+                        <div class="seat-row-z">
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                        </div>
+                    
+                        <div class="seat-row-z">
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                        </div>
+                    
+                        <div class="seat-row-z">
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                        </div>
+                    
+                        <div class="seat-row-z">
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                        </div>
+                    
+                        <div class="seat-row-z">
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z seat-occupied-z"></div>
+                            <div class="seat-z"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-6 container-sm select-submit-z">
+                    <div class="movie-container-z">
+                        <h4>Date:</h4>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="pill"><span id="select-day1-z">day1</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill" ><span id="select-day2-z">day2</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill"><span id="select-day3-z">day3</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill"><span id="select-day4-z">day4</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill"><span id="select-day5-z">day5</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill"><span id="select-day6-z">day6</span></a>
+                            </li>
+                        </ul>
+                        <h4>Seat: <span class="picked-seat-z"></span></h4>
+                        <label for="movie"><h4>Pick a movie:</h4>
+                            <select id="movie" >
+                                <option value="10">Avengers: Endgame ($10)</option>
+                                <option value="12">Joker ($12)</option>
+                                <option value="8">Toy Story 4 ($8)</option>
+                                <option value="9">The Lion King ($9)</option>
+                            </select>
+                        </label><br>
+                        <label for="book-email-z"><h4>Contact Detail: </h4>
+                            <input type="email" id="book-email-z" size="20" placeholder="Your Email Address">
+                        </label><br>
+                        <h2>Total: </h2>
+                        <button> Review and Pay</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane container fade" id="menu2">2</div>
-        <div class="tab-pane container fade" id="menu3">3</div>
-        <div class="tab-pane container fade" id="menu4">4</div>
-        <div class="tab-pane container fade" id="menu5">5</div>
-        <div class="tab-pane container fade" id="menu6">nnnnnnnnnnnnnn</div>
-    </div>
-    
 </div>
+
 
 
 
@@ -112,5 +206,6 @@
         }
     });
 </script>
+<script src="../js/main.js"></script>
 </body>
 </html>
