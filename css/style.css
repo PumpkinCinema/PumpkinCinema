@@ -74,23 +74,44 @@ body {
     border-color: #FF770E !important;
  }
 
-/* CSS for BookTicket and WhatsOn */
+/* ---- CSS for BookTicket and WhatsOn ---------------------------*/
 
 .select-date-z{
   margin-top: 100px;
 }
 
-.select-box-z {
+.select-box-z , .select-submit-z  {
+  display: flex;
+  flex-direction: column;
+  /* color: #fff; */
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+}
+
+.select-zone-z {
   display: flex;
   flex-direction: column;
   perspective: 1000px;
-  color: #fff;
+  /* color: #fff; */
   align-items: center;
   justify-content: center;
-  height: 500px;
+  
 }
-.select-seat-z {
-  background-image: url('../images/seat-unselected.png');
+
+
+.select-screen-z {
+  background-color: #fff;
+  height: 100px;
+  width: 230px;
+  margin: 15px 0;
+  transform: rotateX(-30deg);
+  /* 255, 255, 255, 0.7 */
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
+}
+
+.seat-z {
+  background-color: #444451;
   height: 12px;
   width: 15px;
   margin: 3px;
@@ -98,12 +119,48 @@ body {
   border-top-right-radius: 10px;
 }
 
-.select-screen-z {
+.seat-z.seat-selected-z {
+  background-color: #6feaf6;
+}
+.seat-z.seat-occupied-z {
   background-color: #fff;
-  height: 100px;
-  width: 70%;
-  margin: 15px 0;
-  transform: rotateX(-30deg);
-  /* 255, 255, 255, 0.7 */
-  box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
+}
+
+.seat-z:nth-of-type(2) {
+  margin-right: 18px;
+}
+.seat-z:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat-z:not(.seat-occupied-z):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.seat-showcase-z.seat-z:not(.seat-occupied-z):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.seat-showcase-z {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.seat-showcase-z li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.seat-showcase-z li small {
+  margin-left: 2px;
+}
+
+.seat-row-z {
+  display: flex;
 }

@@ -35,7 +35,7 @@ $(function () {
 
 
 // JS for the BookTicket page 
-window.onload = function(){
+window.onload = () => {
     for(let i = 0; i < 8; i++){
         let date = new Date();
         date.setDate(date.getDate() + i);
@@ -45,6 +45,23 @@ window.onload = function(){
 
 }
 
+//seat click event
+const selectBox = document.querySelector(".select-zone-z");
+const seats = document.querySelectorAll(".seat-row-z .seat-z:not(.seat-occupied-z)");
+
+selectBox.addEventListener("click", e => {
+    if (
+      e.target.classList.contains("seat-z") &&
+      !e.target.classList.contains("seat-occupied-z")
+    ) {
+      e.target.classList.toggle("seat-selected-z");
+    }
+    
+    
+  });
 
 
-// JS for the WhatsOn page
+
+ 
+
+// JS for the WhatsOn page 
