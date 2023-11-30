@@ -79,12 +79,71 @@ body {
   color: #FF770E;
 }
 
+.l-contactbg {
+  background: url('../images/lcinema.jpg') no-repeat center center fixed;
+  min-height: 100vh;
+}
+
 .l-conform {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 20px 40px 40px 40px;
   color: white;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* contact us form css */
+.l-card {
+  margin-top: 60px;
+  margin-bottom: 80px
+}
+
+textarea[name="message"] {
+  resize: none
+}
+
+#e-mail {
+  height: 45px
+}
+
+#message {
+  height: 120px
+}
+
+input.input-box,
+textarea.input-box {
+  background-color: #616161;
+  border: #616161;
+  color: #BDBDBD
+}
+
+input.input-box:focus,
+textarea.input-box:focus {
+  background-color: #000000;
+  color: #BDBDBD
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #9E9E9E
+}
+
+::-moz-placeholder {
+  color: #9E9E9E !important
+}
+
+input.btn-purple {
+  padding: 10px 50px;
+  background-color: #FF770E;
+  color: #ffffff
+}
+/* --------------------- END OF FORM CSS --------------------- */
+
+.jumbotron {
+  background-image: url('../images/lcinema.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white; /* Change the text color to white */
 }

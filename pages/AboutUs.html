@@ -49,36 +49,71 @@
     </header>
 
     <!-- container -->
-    <div class="container py-5">
-        <section id="about-us" class="mb-5 mt-5 text-white">
-            <p class="l-title text-uppercase">About Us</p>
-            <p class="l-lead">Welcome to Pumpkin Cinema, Dublin's cinematic haven! Immerse yourself in a world of
-                unparalleled
-                movie magic at our state-of-the-art theaters. From blockbuster hits to indie treasures, Pumpkin Cinema
-                caters to
-                all tastes. Our cozy seating, gourmet snacks, and top-notch service ensure a memorable experience.
-                Follow us on
-                social media for exclusive screenings and events. Pumpkin Cinema isn't just a theater; it's a cultural
-                hub,
-                fostering a love for film in the heart of Dublin. Join us for an extraordinary cinematic journey where
-                every
-                visit is a celebration of storytelling. Welcome to Pumpkin Cinema, where movies come to life!</p>
+    <div class="container">
+        <!-- ---------------------------------------- about us ---------------------------------------- -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="p-4 py-5 mb-3">
+                <p class="l-title mt-5">Welcome to Pumpkin Cinema</p>
+                <p class="lead">
+                    Welcome to Pumpkin Cinema, your premier destination for cinematic excellence in the heart of Dublin!
+                    Nestled in the vibrant cityscape, our cinema promises an unparalleled movie-going experience that
+                    transcends the ordinary.
+                </p>
+                <p class="lead">
+                    At Pumpkin Cinema, we take pride in curating a diverse selection of films, ranging from blockbuster
+                    hits to independent gems, ensuring there's something for every cinephile. Our state-of-the-art
+                    theaters boast cutting-edge audiovisual technology, guaranteeing crystal-clear visuals and immersive
+                    sound that elevate your movie experience to new heights.
+                </p>
+                <p class="lead">
+                    Beyond the silver screen, our commitment to customer satisfaction is unwavering. Our friendly and
+                    professional staff is dedicated to providing top-notch service, ensuring that every visit is a
+                    seamless and enjoyable affair. Whether you're a solo movie enthusiast, on a date night, or planning
+                    a family outing, Pumpkin Cinema is the perfect venue for creating lasting memories.
+                </p>
+                <p class="lead">
+                    Indulge in our comfortable and stylish seating arrangements, designed to maximize your viewing
+                    pleasure. Our concession stands offer a variety of snacks and beverages, from classic popcorn to
+                    gourmet treats, catering to all tastes and preferences. Pumpkin Cinema is not just a place to watch
+                    movies; it's a destination where cinema enthusiasts come together to celebrate the magic of
+                    storytelling.
+                </p>
+                <p class="lead">
+                    Stay tuned for our special events, exclusive screenings, and themed nights that add an extra layer
+                    of excitement to your cinematic journey. Follow us on social media for the latest updates,
+                    promotions, and behind-the-scenes glimpses into the world of Pumpkin Cinema.
+                </p>
+            </div>
+        </div>
+
+        <!-- ---------------------------------------- contact us ---------------------------------------- -->
+        <section>
+            <div class="l-conform">
+                <form class="" onsubmit="event.preventDefault()">
+                    <div class="l-card">
+
+                        <p class="l-title">Contact Us</p>
+                        <p class="text-white">Use the form below to share your questions, ideas,
+                            comments and feedback</p>
+
+
+                        <p class="mb-1 text-white">Email</p>
+                        <input id="e-mail" type="email" placeholder="Enter your email" name="email"
+                            class="form-control input-box mb-3" required>
+
+
+                        <p class="mb-1">Message</p> <textarea id="message" type="text" placeholder="Enter your message"
+                            name="message" class="form-control input-box mb-4"></textarea>
+
+                        <input type="submit" value="Submit" class="btn btn-block btn-purple">
+                    </div>
+                </form>
+            </div>
         </section>
-        <section id="contact-us" class="mb-5" data-bs-theme="dark">
-            <form class="l-conform">
-                <p class="l-title text-uppercase">Contact Us</p>
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name">
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email">
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-light">Submit</button>
-            </form>
-        </section>
+
+
+
+        <!-- -------------------------------------------- map -------------------------------------------- -->
         <section id="map">
             <iframe class="w-100" style="height: 400px;"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6830764214897!2d-6.245567723056992!3d53.34892917229009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational%20College%20of%20Ireland!5e0!3m2!1sen!2sie!4v1701292010596!5m2!1sen!2sie"
@@ -95,24 +130,22 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Pumpkin Cinema</h5>
-
                     <p>
-                        Pumpkin Cinema is a cinema located in Dublin, Ireland. It was opened in 2021, and is one of the
-                        most modern cinemas in the world.
+                        Pumpkin Cinema is a cinema located in Dublin, Ireland. It was opened in 2021, and is one of
+                        the most modern cinemas in the world.
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Contact Us</h5>
-
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-white">Phone: 01 234 5678</a>
+                            <a href="#" class="text-white">Phone: 01 234 5678</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Email: pumpkinCinema@gmail.com</a>
+                            <a href="#" class="text-white">Email: pumpkinCinema@gmail.com</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Address: 123 Main Street, Dublin, Ireland</a>
+                            <a href="#" class="text-white">Address: 123 Main Street, Dublin, Ireland</a>
                         </li>
                     </ul>
                 </div>
