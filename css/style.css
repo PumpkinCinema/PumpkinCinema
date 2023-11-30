@@ -26,7 +26,6 @@ body {
   color: #FF770E;
 }
 
-
 /* Change navbar styling on scroll */
 .navbar.active {
   background: #0E141B;
@@ -47,7 +46,6 @@ body {
   color: #FF770E;
 }
 
-
 /* Change navbar styling on small viewports */
 @media (max-width: 990px) {
   .navbar {
@@ -59,11 +57,10 @@ body {
     color: #fff;
   }
 }
-
 /* --------------------------------------------------- */
 
 
-
+/* Home Page CSS */
 .banner-image {
   background-image: url('../images/jokerr.png');
   background-size: cover;
@@ -73,4 +70,21 @@ body {
 .btn-primary {
   background-color: #FF770E !important;
   border-color: #FF770E !important;
+}
+
+/* About Us Page CSS */
+.l-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #FF770E;
+}
+
+.l-conform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px 40px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
