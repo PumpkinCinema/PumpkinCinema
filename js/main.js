@@ -47,8 +47,9 @@ window.onload = () => {
 
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
-const seats = document.querySelectorAll(".seat-row-z .seat-z:not(.seat-occupied-z)");
-
+const seats = document.getElementsByClassName("seat-selected-z");
+const displayPickedSeat = document.getElementById("picked-seat-z");
+const picked = [];
 selectBox.addEventListener("click", e => {
     if (
       e.target.classList.contains("seat-z") &&
@@ -56,9 +57,16 @@ selectBox.addEventListener("click", e => {
     ) {
       e.target.classList.toggle("seat-selected-z");
     }
-    
-    
+
+
+    for(let i = 0; i < seats.length; i++){
+        picked[i] = seats[i].getAttribute("data-value");
+    }
+    displayPickedSeat.innerHTML = picked.toString();
+
+
   });
+
 
 
 
