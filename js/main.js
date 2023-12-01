@@ -47,25 +47,29 @@ window.onload = () => {
 
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
-const seats = document.getElementsByClassName("seat-selected-z");
 const displayPickedSeat = document.getElementById("picked-seat-z");
-const picked = [];
-selectBox.addEventListener("click", e => {
-    if (
-      e.target.classList.contains("seat-z") &&
-      !e.target.classList.contains("seat-occupied-z")
-    ) {
-      e.target.classList.toggle("seat-selected-z");
-    }
+
+selectBox.addEventListener("click",
+    e => {
+        if (
+            e.target.classList.contains("seat-z") &&
+            !e.target.classList.contains("seat-occupied-z")
+        ) {
+            e.target.classList.toggle("seat-selected-z");
+        }
+
+        let picked = [];
+        let seats = document.getElementsByClassName("seat-selected-z");
+        let seatInfo = "";
+        for (let i = 0; i < seats.length; i++) {
+            picked[i] = seats[i].getAttribute("data-value");
+        }
+        seatInfo = picked.toString();
+        let seatInfo2 = seatInfo.substring(1);
+        displayPickedSeat.innerHTML = seatInfo2;
 
 
-    for(let i = 0; i < seats.length; i++){
-        picked[i] = seats[i].getAttribute("data-value");
-    }
-    displayPickedSeat.innerHTML = picked.toString();
-
-
-  });
+    });
 
 
 
