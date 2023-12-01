@@ -76,37 +76,34 @@ body {
 
 /* ---- CSS for BookTicket and WhatsOn , Zhenghao---------------------------*/
 
-.book-content-z{
+.devider-z{
   margin-top: 100px;
 }
 
 .select-box-z   {
   display: flex;
   flex-direction: column;
-  /* color: #fff; */
   align-items: center;
   justify-content: center;
-  height: 400px;
+  height: 350px;
 }
-.select-submit-z {
-  display: flex;
-  flex-direction: column;
-  /* color: #fff; */
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-}
+
 
 .select-zone-z {
   display: flex;
   flex-direction: column;
   perspective: 1000px;
-  /* color: #fff; */
   align-items: center;
   justify-content: center;
   
 }
-
+.select-submit-z {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+}
 
 .select-screen-z {
   background-color: #fff;
@@ -114,8 +111,14 @@ body {
   width: 230px;
   margin: 15px 0;
   transform: rotateX(-30deg);
-  /* 255, 255, 255, 0.7 */
   box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
+}
+.select-date-z {
+
+  display: flex;
+  width: 230px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .seat-z {
@@ -128,6 +131,9 @@ body {
 }
 
 .seat-z.seat-selected-z {
+  background-color: #6feaf6;
+}
+.seat-z.show-selected-z {
   background-color: #6feaf6;
 }
 .seat-z.seat-occupied-z {
@@ -156,21 +162,16 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   color: #777;
-
   justify-content: center;
 }
-
 
 .seat-row-z {
   display: flex;
 }
 
-.select-date-z {
-  display: flex;
+#picked-seat-z {
   width: 230px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+  overflow: auto;
 }
 
 

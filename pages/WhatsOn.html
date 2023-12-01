@@ -4,75 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PumpkinCinema</title>
-    <script src="../js/main.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- custom css -->
-    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
+
 <!-- Navbar  -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="../images/logo.svg" alt="logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<div class="book-content-z container text-white">
-
-
-        <div class="col-sm-6 container-sm select-submit-z p-3 border">
-
-            <form >
-                <h4>Date:</h4>
-                <div class=" select-date-z border">
-
-                        <input type="radio" class="btn-check btn-warning " name="options" id="option1" autocomplete="off" checked>
-                        <label class="btn btn-outline-warning btn-sm m-1 " for="option1" id="select-day1-z">day1</label>
-
-                        <input type="radio" class="btn-check btn-warning" name="options" id="option2" autocomplete="off">
-                        <label class="btn btn-outline-warning btn-sm m-1" for="option2" id="select-day2-z">day2</label>
-
-                        <input type="radio" class="btn-check btn-warning" name="options" id="option3" autocomplete="off">
-                        <label class="btn btn-outline-warning btn-sm m-1" for="option3"id="select-day3-z" >day3</label>
-
-                        <input type="radio" class="btn-check btn-warning" name="options" id="option4" autocomplete="off">
-                        <label class="btn btn-outline-warning btn-sm m-1" for="option4" id="select-day4-z" >day4</label>
-
-                        <input type="radio" class="btn-check btn-warning" name="options" id="option5" autocomplete="off">
-                        <label class="btn btn-outline-warning btn-sm m-1" for="option5" id="select-day5-z" >day5</label>
-
-                        <input type="radio" class="btn-check btn-warning" name="options" id="option6" autocomplete="off">
-                        <label class="btn btn-outline-warning btn-sm m-1" for="option6" id="select-day6-z" >day5</label>
-                    </div>
-
-                <h4 >Seat: <span id="picked-seat-z"></span></h4>
-                <label for="movie"><h4>Pick a movie:</h4>
-                    <select id="movie" >
-                        <option value="10">Avengers: Endgame ($10)</option>
-                        <option value="12">Joker ($12)</option>
-                        <option value="8">Toy Story 4 ($8)</option>
-                        <option value="9">The Lion King ($9)</option>
-                    </select>
-                </label><br>
-                <label for="book-email-z"><h4>Contact Detail: </h4>
-                    <input type="email" id="book-email-z" size="20" placeholder="Your Email Address">
-                </label><br>
-                <h2>Total: </h2>
-                <button> Review and Pay</button>
-            </form>
-
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#"
+                                                   class="nav-link text-uppercase font-weight-bold">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
+</header>
+
+<hr class="devider-z">
+
 
 
 
 
 <script type="text/javascript">
     var nav = document.querySelector('nav');
-
     window.addEventListener('scroll', function () {
         if (window.pageYOffset > 100) {
             nav.classList.add('bg-dark', 'shadow');
@@ -81,5 +67,6 @@
         }
     });
 </script>
+<script src="../js/main.js"></script>
 </body>
 </html>

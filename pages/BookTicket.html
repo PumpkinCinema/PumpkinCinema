@@ -4,201 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets</title>
-
-    
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- custom css -->
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+    <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css">
-   
+
 </head>
-<body >
+<body>
 <!-- Navbar  -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container">
-                <a href="#" class="navbar-brand">
-                    <img src="../images/logo.svg" alt="logo" width="100">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="../images/logo.svg" alt="logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#"
-                                class="nav-link text-uppercase font-weight-bold">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-<!-- Seat Select -->
-<div class="book-content-z container ">
-    <!-- Date Select -->
-
-
-    <!-- Select seat and caculate price based on selected date -->
-
-        <div class="container text-white" >
-            <div class="row ">
-                <div class="col-md-6 container-md select-box-z ">
-                    <br>
-                    <div class="seat-showcase-z row">
-                        <div class="col-4">
-                          <div class="seat-z mx-auto"></div>
-                          <div >Avaliable</div>
-                        </div>
-                        <div class="col-4">
-                          <div class="seat-z seat-selected-z mx-auto"></div>
-                          <div>Selected</div>
-                        </div>
-                        <div class=" col-4">
-                          <div class="seat-z seat-occupied-z mx-auto"></div>
-                          <div >Occupied</div>
-                        </div>
-                      </div>
-                      
-                      <div class="select-zone-z">
-                        <div class="select-screen-z"></div>
-                        <div class="seat-row-z" >
-                            <div class="seat-z" data-value="A1"></div>
-                            <div class="seat-z" data-value="A2"></div>
-                            <div class="seat-z" data-value="A3"></div>
-                            <div class="seat-z" data-value="A4"></div>
-                            <div class="seat-z" data-value="A5"></div>
-                            <div class="seat-z" data-value="A6"></div>
-                            <div class="seat-z" data-value="A7"></div>
-                            <div class="seat-z" data-value="A8"></div>
-                        </div>
-
-                          <div class="seat-row-z" >
-                              <div class="seat-z" data-value="B1"></div>
-                              <div class="seat-z" data-value="B2"></div>
-                              <div class="seat-z seat-occupied-z" data-value="B3"></div>
-                              <div class="seat-z" data-value="B4"></div>
-                              <div class="seat-z" data-value="B5"></div>
-                              <div class="seat-z" data-value="B6"></div>
-                              <div class="seat-z" data-value="B7"></div>
-                              <div class="seat-z" data-value="B8"></div>
-                          </div>
-
-                          <div class="seat-row-z" >
-                              <div class="seat-z" data-value="C1"></div>
-                              <div class="seat-z" data-value="C2"></div>
-                              <div class="seat-z" data-value="C3"></div>
-                              <div class="seat-z" data-value="C4"></div>
-                              <div class="seat-z seat-occupied-z" data-value="C5"></div>
-                              <div class="seat-z seat-occupied-z" data-value="C6"></div>
-                              <div class="seat-z" data-value="C7"></div>
-                              <div class="seat-z" data-value="C8"></div>
-                          </div>
-
-                          <div class="seat-row-z" >
-                              <div class="seat-z" data-value="D1"></div>
-                              <div class="seat-z" data-value="D2"></div>
-                              <div class="seat-z" data-value="D3"></div>
-                              <div class="seat-z" data-value="D4"></div>
-                              <div class="seat-z" data-value="D5"></div>
-                              <div class="seat-z" data-value="D6"></div>
-                              <div class="seat-z" data-value="D7"></div>
-                              <div class="seat-z" data-value="D8"></div>
-                          </div>
-
-                          <div class="seat-row-z" >
-                              <div class="seat-z" data-value="E1"></div>
-                              <div class="seat-z" data-value="E2"></div>
-                              <div class="seat-z seat-occupied-z" data-value="E3"></div>
-                              <div class="seat-z" data-value="E4"></div>
-                              <div class="seat-z" data-value="E5"></div>
-                              <div class="seat-z seat-occupied-z" data-value="E6"></div>
-                              <div class="seat-z" data-value="E7"></div>
-                              <div class="seat-z" data-value="E8"></div>
-                          </div>
-
-                          <div class="seat-row-z" >
-                              <div class="seat-z" data-value="F1"></div>
-                              <div class="seat-z" data-value="F2"></div>
-                              <div class="seat-z" data-value="F3"></div>
-                              <div class="seat-z" data-value="F4"></div>
-                              <div class="seat-z" data-value="F5"></div>
-                              <div class="seat-z" data-value="F6"></div>
-                              <div class="seat-z" data-value="F7"></div>
-                              <div class="seat-z" data-value="F8"></div>
-                          </div>
-                    </div>
-                    
-                </div>
-                <div class="col-md-6 container-md select-submit-z">
-
-                        <form>
-                            <h4>Date:</h4>
-                            <div class="select-date-z">
-
-                                <input type="radio" class="btn-check btn-warning " name="options" id="option1" autocomplete="off" checked>
-                                <label class="btn btn-outline-warning btn-sm m-1 " for="option1" id="select-day1-z">day1</label>
-
-                                <input type="radio" class="btn-check btn-warning" name="options" id="option2" autocomplete="off">
-                                <label class="btn btn-outline-warning btn-sm m-1" for="option2" id="select-day2-z">day2</label>
-
-                                <input type="radio" class="btn-check btn-warning" name="options" id="option3" autocomplete="off">
-                                <label class="btn btn-outline-warning btn-sm m-1" for="option3"id="select-day3-z" >day3</label>
-
-                                <input type="radio" class="btn-check btn-warning" name="options" id="option4" autocomplete="off">
-                                <label class="btn btn-outline-warning btn-sm m-1" for="option4" id="select-day4-z" >day4</label>
-
-                                <input type="radio" class="btn-check btn-warning" name="options" id="option5" autocomplete="off">
-                                <label class="btn btn-outline-warning btn-sm m-1" for="option5" id="select-day5-z" >day5</label>
-
-                                <input type="radio" class="btn-check btn-warning" name="options" id="option6" autocomplete="off">
-                                <label class="btn btn-outline-warning btn-sm m-1" for="option6" id="select-day6-z" >day5</label>
-                            </div>
-                            <h4 >Seat: <span id="picked-seat-z"></span></h4>
-                            <label for="movie"><h4>Pick a movie:</h4>
-                                <select id="movie" >
-                                    <option value="10">Avengers: Endgame ($10)</option>
-                                    <option value="12">Joker ($12)</option>
-                                    <option value="8">Toy Story 4 ($8)</option>
-                                    <option value="9">The Lion King ($9)</option>
-                                </select>
-                            </label><br>
-                            <label for="book-email-z"><h4>Contact Detail: </h4>
-                                <input type="email" id="book-email-z" size="20" placeholder="Your Email Address">
-                            </label><br>
-                            <h2>Total: </h2>
-                            <button class="btn btn-warning"> Review and Pay</button>
-                        </form>
-
-                </div>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#"
+                                                   class="nav-link text-uppercase font-weight-bold">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
-</div>
+    </nav>
+</header>
 
+<hr class="devider-z">
+
+<!-- Booking Section -->
+<div class="container text-white">
+    <div class="row ">
+
+<!--    Seat Selection -->
+        <div class="col-md-6 container-md select-box-z ">
+            <br>
+
+<!--        Seat Selection Showcase -->
+            <div class="seat-showcase-z row">
+                <div class="col-4">
+                    <div class="seat-z mx-auto"></div>
+                    <div>Avaliable</div>
+                </div>
+                <div class="col-4">
+                    <div class="seat-z show-selected-z mx-auto"></div>
+                    <div>Selected</div>
+                </div>
+                <div class=" col-4">
+                    <div class="seat-z seat-occupied-z mx-auto"></div>
+                    <div>Occupied</div>
+                </div>
+            </div>
+
+<!--        Seat Selection -->
+            <div class="select-zone-z">
+                <div class="select-screen-z"></div>
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="A1"></div>
+                    <div class="seat-z" data-value="A2"></div>
+                    <div class="seat-z" data-value="A3"></div>
+                    <div class="seat-z" data-value="A4"></div>
+                    <div class="seat-z" data-value="A5"></div>
+                    <div class="seat-z" data-value="A6"></div>
+                    <div class="seat-z" data-value="A7"></div>
+                    <div class="seat-z" data-value="A8"></div>
+                </div>
+
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="B1"></div>
+                    <div class="seat-z" data-value="B2"></div>
+                    <div class="seat-z seat-occupied-z" data-value="B3"></div>
+                    <div class="seat-z" data-value="B4"></div>
+                    <div class="seat-z" data-value="B5"></div>
+                    <div class="seat-z" data-value="B6"></div>
+                    <div class="seat-z" data-value="B7"></div>
+                    <div class="seat-z" data-value="B8"></div>
+                </div>
+
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="C1"></div>
+                    <div class="seat-z" data-value="C2"></div>
+                    <div class="seat-z" data-value="C3"></div>
+                    <div class="seat-z" data-value="C4"></div>
+                    <div class="seat-z seat-occupied-z" data-value="C5"></div>
+                    <div class="seat-z seat-occupied-z" data-value="C6"></div>
+                    <div class="seat-z" data-value="C7"></div>
+                    <div class="seat-z" data-value="C8"></div>
+                </div>
+
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="D1"></div>
+                    <div class="seat-z" data-value="D2"></div>
+                    <div class="seat-z" data-value="D3"></div>
+                    <div class="seat-z" data-value="D4"></div>
+                    <div class="seat-z" data-value="D5"></div>
+                    <div class="seat-z" data-value="D6"></div>
+                    <div class="seat-z" data-value="D7"></div>
+                    <div class="seat-z" data-value="D8"></div>
+                </div>
+
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="E1"></div>
+                    <div class="seat-z" data-value="E2"></div>
+                    <div class="seat-z seat-occupied-z" data-value="E3"></div>
+                    <div class="seat-z" data-value="E4"></div>
+                    <div class="seat-z" data-value="E5"></div>
+                    <div class="seat-z seat-occupied-z" data-value="E6"></div>
+                    <div class="seat-z" data-value="E7"></div>
+                    <div class="seat-z" data-value="E8"></div>
+                </div>
+
+                <div class="seat-row-z">
+                    <div class="seat-z" data-value="F1"></div>
+                    <div class="seat-z" data-value="F2"></div>
+                    <div class="seat-z" data-value="F3"></div>
+                    <div class="seat-z" data-value="F4"></div>
+                    <div class="seat-z" data-value="F5"></div>
+                    <div class="seat-z" data-value="F6"></div>
+                    <div class="seat-z" data-value="F7"></div>
+                    <div class="seat-z" data-value="F8"></div>
+                </div>
+            </div>
+
+        </div>
+
+<!--    Select the day, movie and fill the email-->
+        <div class="col-md-6 container-md select-submit-z ">
+            <form>
+<!--                select the day-->
+                <p>Date:</p>
+                <div class="select-date-z">
+
+                    <input type="radio" class="btn-check btn-warning " name="date" id="day1" autocomplete="off" checked>
+                    <label class="btn btn-outline-warning btn-sm m-1 " for="day1" id="select-day1-z">day1</label>
+
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm m-1" for="day2" id="select-day2-z">day2</label>
+
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day3" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm m-1" for="day3" id="select-day3-z">day3</label>
+
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day4" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm m-1" for="day4" id="select-day4-z">day4</label>
+
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day5" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm m-1" for="day5" id="select-day5-z">day5</label>
+
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day6" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm m-1" for="day6" id="select-day6-z">day5</label>
+                </div>
+
+<!--                display the selected seat -->
+                <div>
+                    <p>Seat:</p>
+                    <div id="picked-seat-z" class="text-wrap"></div>
+                </div>
+
+<!--                select a movie -->
+                <div>
+                    <label for="movie">Pick a movie:<br>
+                        <select id="movie">
+                            <option value="10">Avengers: Endgame ($10)</option>
+                            <option value="12">Joker ($12)</option>
+                            <option value="8">Toy Story 4 ($8)</option>
+                            <option value="9">The Lion King ($9)</option>
+                        </select>
+                    </label>
+                </div>
+
+<!--                Enter the contact email-->
+                <div>
+                    <label for="book-email-z">Contact Detail:<br>
+                        <input type="email" id="book-email-z" size="20" placeholder="Your Email Address">
+                    </label>
+                </div>
+                <p>Total: </p>
+<!--                Submit button-->
+                <button class="btn btn-warning"> Review and Pay</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
 
 
 <script type="text/javascript">
     var nav = document.querySelector('nav');
-
     window.addEventListener('scroll', function () {
         if (window.pageYOffset > 100) {
             nav.classList.add('bg-dark', 'shadow');

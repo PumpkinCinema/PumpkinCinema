@@ -39,15 +39,14 @@ window.onload = () => {
     for(let i = 0; i < 8; i++){
         let date = new Date();
         date.setDate(date.getDate() + i);
-        let day = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
-        document.getElementById("select-day" + (i + 1) + "-z").innerHTML = day;
+        document.getElementById("select-day" + (i + 1) + "-z").innerHTML = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
     }
-
+    // return true;
 }
 
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
-const displayPickedSeat = document.getElementById("picked-seat-z");
+const pickedSeat = document.getElementById("picked-seat-z");
 
 selectBox.addEventListener("click",
     e => {
@@ -58,15 +57,12 @@ selectBox.addEventListener("click",
             e.target.classList.toggle("seat-selected-z");
         }
 
-        let picked = [];
+        const picked = [];
         let seats = document.getElementsByClassName("seat-selected-z");
-        let seatInfo = "";
         for (let i = 0; i < seats.length; i++) {
-            picked[i] = seats[i].getAttribute("data-value");
+            picked[i] = seats[i].getAttribute("data-value") + " ";
         }
-        seatInfo = picked.toString();
-        let seatInfo2 = seatInfo.substring(1);
-        displayPickedSeat.innerHTML = seatInfo2;
+        pickedSeat.innerText = picked.toString();
 
 
     });
