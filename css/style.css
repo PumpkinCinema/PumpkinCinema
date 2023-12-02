@@ -97,53 +97,46 @@ body {
 
 /* contact us form css */
 .l-card {
-  margin-top: 60px;
-  margin-bottom: 80px
+  margin-bottom: 80px;
 }
 
+
 textarea[name="message"] {
-  resize: none
+  resize: none;
 }
 
 #e-mail {
-  height: 45px
+  height: 45px;
 }
 
 #message {
-  height: 120px
+  height: 120px;
 }
 
 input.input-box,
 textarea.input-box {
   background-color: #616161;
   border: #616161;
-  color: #BDBDBD
+  color: #BDBDBD;
 }
 
 input.input-box:focus,
 textarea.input-box:focus {
   background-color: #000000;
-  color: #BDBDBD
+  color: #BDBDBD;
 }
 
 form .form-control::-webkit-input-placeholder {
-  color: #9E9E9E
+  color: #9E9E9E;
 }
 
 ::-moz-placeholder {
-  color: #9E9E9E !important
+  color: #9E9E9E !important;
 }
 
 input.btn-purple {
   padding: 10px 50px;
   background-color: #FF770E;
-  color: #ffffff
+  color: #ffffff;
 }
 /* --------------------- END OF FORM CSS --------------------- */
-
-.jumbotron {
-  background-image: url('../images/lcinema.jpg');
-  background-size: cover;
-  background-position: center center;
-  color: white; /* Change the text color to white */
-}

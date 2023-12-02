@@ -51,9 +51,14 @@
     <!-- container -->
     <div class="container">
         <!-- ---------------------------------------- about us ---------------------------------------- -->
-        <div class="jumbotron jumbotron-fluid">
+        <div class="text-white">
             <div class="p-4 py-5 mb-3">
-                <p class="l-title mt-5">Welcome to Pumpkin Cinema</p>
+                <div class="d-flex justify-content-center align-center">
+                    <p class="l-title mt-5">Welcome to Pumpkin Cinema</p>
+                </div>
+                <div class="d-flex justify-content-center align-center my-3">
+                    <img src="../images/lcinemapic.jpg" alt="lcinema" width="80%" class="rounded-3">
+                </div>
                 <p class="lead">
                     Welcome to Pumpkin Cinema, your premier destination for cinematic excellence in the heart of Dublin!
                     Nestled in the vibrant cityscape, our cinema promises an unparalleled movie-going experience that
@@ -78,33 +83,24 @@
                     movies; it's a destination where cinema enthusiasts come together to celebrate the magic of
                     storytelling.
                 </p>
-                <p class="lead">
-                    Stay tuned for our special events, exclusive screenings, and themed nights that add an extra layer
-                    of excitement to your cinematic journey. Follow us on social media for the latest updates,
-                    promotions, and behind-the-scenes glimpses into the world of Pumpkin Cinema.
-                </p>
             </div>
         </div>
 
         <!-- ---------------------------------------- contact us ---------------------------------------- -->
         <section>
-            <div class="l-conform">
+            <div class="">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <p class="l-title">Contact Us</p>
+                    <p class="text-white">Use the form below to share your questions, ideas,
+                        comments and feedback</p>
+                </div>
                 <form class="" onsubmit="event.preventDefault()">
                     <div class="l-card">
-
-                        <p class="l-title">Contact Us</p>
-                        <p class="text-white">Use the form below to share your questions, ideas,
-                            comments and feedback</p>
-
-
                         <p class="mb-1 text-white">Email</p>
                         <input id="e-mail" type="email" placeholder="Enter your email" name="email"
                             class="form-control input-box mb-3" required>
-
-
-                        <p class="mb-1">Message</p> <textarea id="message" type="text" placeholder="Enter your message"
+                        <p class="mb-1 text-white">Message</p> <textarea id="message" type="text" placeholder="Enter your message"
                             name="message" class="form-control input-box mb-4"></textarea>
-
                         <input type="submit" value="Submit" class="btn btn-block btn-purple">
                     </div>
                 </form>
