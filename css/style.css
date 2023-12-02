@@ -74,31 +74,36 @@ body {
     border-color: #FF770E !important;
  }
 
-/* ---- CSS for BookTicket and WhatsOn ---------------------------*/
+/* ---- CSS for BookTicket and WhatsOn , Zhenghao---------------------------*/
 
-.select-date-z{
+.devider-z{
   margin-top: 100px;
 }
 
-.select-box-z , .select-submit-z  {
+.select-box-z   {
   display: flex;
   flex-direction: column;
-  /* color: #fff; */
   align-items: center;
   justify-content: center;
-  height: 320px;
+  height: 350px;
 }
+
 
 .select-zone-z {
   display: flex;
   flex-direction: column;
   perspective: 1000px;
-  /* color: #fff; */
   align-items: center;
   justify-content: center;
   
 }
-
+.select-submit-z {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+}
 
 .select-screen-z {
   background-color: #fff;
@@ -106,8 +111,14 @@ body {
   width: 230px;
   margin: 15px 0;
   transform: rotateX(-30deg);
-  /* 255, 255, 255, 0.7 */
   box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
+}
+.select-date-z {
+
+  display: flex;
+  width: 230px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .seat-z {
@@ -120,6 +131,9 @@ body {
 }
 
 .seat-z.seat-selected-z {
+  background-color: #6feaf6;
+}
+.seat-z.show-selected-z {
   background-color: #6feaf6;
 }
 .seat-z.seat-occupied-z {
@@ -144,23 +158,44 @@ body {
 
 .seat-showcase-z {
   background-color: rgba(0, 0, 0, 0.1);
+  width:280px;
   padding: 5px 10px;
   border-radius: 5px;
   color: #777;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-}
-.seat-showcase-z li {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0 10px;
-}
-.seat-showcase-z li small {
-  margin-left: 2px;
 }
 
 .seat-row-z {
   display: flex;
 }
+
+#picked-seat-z {
+  width: 230px;
+  overflow: auto;
+}
+
+
+.btn-warning {
+  background-color: #ff770e;
+  border-color: #ff770e;
+  color: white;
+}
+.btn-warning:hover {
+  background-color: #ff770e;
+  border-color: #ff770e;
+  color: white;
+}
+
+.btn-outline-warning {
+  border-color: #ff770e;
+  color: white;
+}
+.btn-check:checked+.btn {
+  background-color: #ff770e;
+  border-color: #ff770e;
+  color: white;
+}
+
+
+
+
