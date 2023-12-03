@@ -47,7 +47,7 @@ window.onload = () => {
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
 const pickedSeat = document.getElementById("picked-seat-z");
-
+const movieCard = document.getElementsByClassName("movie-card-z");
 selectBox.addEventListener("click",
     e => {
         if (
@@ -66,6 +66,11 @@ selectBox.addEventListener("click",
 
 
     });
+
+// movieCard.addEventListener("click", turnToBookingPage())
+// function turnToBookingPage(){
+//     alert("Do you want to buy ticket for this movie?");
+// }
 
 
 

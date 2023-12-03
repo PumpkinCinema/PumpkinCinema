@@ -175,7 +175,7 @@ body {
 }
 
 
-.btn-warning {
+.btn-warning , bg-warning {
   background-color: #ff770e;
   border-color: #ff770e;
   color: white;
@@ -194,6 +194,23 @@ body {
   background-color: #ff770e;
   border-color: #ff770e;
   color: white;
+}
+
+.movie-poster-z {
+  max-width: 180px;
+  min-width: 180px;
+
+}
+
+.movie-card-z:hover {
+  background-color: rgba(0, 0, 0, 0.56);
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45),
+  25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+  0px 25px 20px -20px rgba(0, 0, 0, 0.45),
+  -25px 0px 20px -20px rgba(0, 0, 0, 0.45);
+  padding-top:30px;
+  padding-bottom: 30px;
+  border-radius: 20px;
 }
 
 
