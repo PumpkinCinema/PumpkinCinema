@@ -67,10 +67,38 @@ body {
   background-position: center center;
 }
 
-.btn-primary {
-  background-color: #FF770E !important;
-  border-color: #FF770E !important;
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
 }
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 40rem;
+}
+
+.l-textfont {
+  font-family: 'Playfair Display', serif;
+  width: 38rem;
+}
+
+.l-textdecor {
+  font-family: 'Playfair Display', serif;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 6px 50px;
+}
+
 
 /* About Us Page CSS */
 .l-title {
@@ -134,7 +162,7 @@ form .form-control::-webkit-input-placeholder {
   color: #9E9E9E !important;
 }
 
-input.btn-purple {
+.btn-purple {
   padding: 10px 50px;
   background-color: #FF770E;
   color: #ffffff;
