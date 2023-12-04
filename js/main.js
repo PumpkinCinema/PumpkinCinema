@@ -39,26 +39,39 @@ window.onload = () => {
     for(let i = 0; i < 8; i++){
         let date = new Date();
         date.setDate(date.getDate() + i);
-        let day = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
-        document.getElementById("select-day" + (i + 1) + "-z").innerHTML = day;
+        document.getElementById("select-day" + (i + 1) + "-z").innerHTML = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
     }
-
+    // return true;
 }
 
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
-const seats = document.querySelectorAll(".seat-row-z .seat-z:not(.seat-occupied-z)");
+const pickedSeat = document.getElementById("picked-seat-z");
+const movieCard = document.getElementsByClassName("movie-card-z");
+selectBox.addEventListener("click",
+    e => {
+        if (
+            e.target.classList.contains("seat-z") &&
+            !e.target.classList.contains("seat-occupied-z")
+        ) {
+            e.target.classList.toggle("seat-selected-z");
+        }
 
-selectBox.addEventListener("click", e => {
-    if (
-      e.target.classList.contains("seat-z") &&
-      !e.target.classList.contains("seat-occupied-z")
-    ) {
-      e.target.classList.toggle("seat-selected-z");
-    }
-    
-    
-  });
+        const picked = [];
+        let seats = document.getElementsByClassName("seat-selected-z");
+        for (let i = 0; i < seats.length; i++) {
+            picked[i] = seats[i].getAttribute("data-value") + " ";
+        }
+        pickedSeat.innerText = picked.toString();
+
+
+    });
+
+// movieCard.addEventListener("click", turnToBookingPage())
+// function turnToBookingPage(){
+//     alert("Do you want to buy ticket for this movie?");
+// }
+
 
 
 
