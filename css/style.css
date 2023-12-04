@@ -160,7 +160,7 @@ body {
   font-size: 80%;
 }
 
-.postcard .postcard__title {
+.postcard .postcard-title {
   font-size: 1.75rem;
 }
 
@@ -175,7 +175,7 @@ body {
   display: contents;
 }
 
-.postcard .postcard__bar {
+.postcard .postcard-bar {
   width: 50px;
   height: 10px;
   margin: 10px 0;
@@ -184,7 +184,7 @@ body {
   transition: width 0.2s ease;
 }
 
-.postcard .postcard__text {
+.postcard .postcard-text {
   padding: 1.5rem;
   position: relative;
   display: flex;
@@ -210,7 +210,7 @@ body {
   border-radius: 10px;
 }
 
-.postcard:hover .postcard__bar {
+.postcard:hover .postcard-bar {
   width: 100px;
 }
 
@@ -219,22 +219,18 @@ body {
     flex-wrap: inherit;
   }
 
-  .postcard .postcard__title {
-    font-size: 2rem;
-  }
-
   .postcard .postcard-img {
     max-width: 300px;
     max-height: 100%;
     transition: transform 0.3s ease;
   }
 
-  .postcard .postcard__text {
+  .postcard .postcard-text {
     padding: 3rem;
     width: 100%;
   }
 
-  .postcard .media.postcard__text:before {
+  .postcard .media.postcard-text:before {
     content: "";
     position: absolute;
     display: block;
@@ -256,23 +252,23 @@ body {
     flex-direction: row-reverse;
   }
 
-  .postcard:nth-child(2n+1) .postcard__text::before {
+  .postcard:nth-child(2n+1) .postcard-text::before {
     left: -12px !important;
     transform: rotate(4deg);
   }
 
-  .postcard:nth-child(2n+0) .postcard__text::before {
+  .postcard:nth-child(2n+0) .postcard-text::before {
     right: -12px !important;
     transform: rotate(-4deg);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .postcard__text {
+  .postcard-text {
     padding: 2rem 3.5rem;
   }
 
-  .postcard__text:before {
+  .postcard-text:before {
     content: "";
     position: absolute;
     display: block;
@@ -281,7 +277,7 @@ body {
     width: 55px;
   }
 
-  .postcard.dark .postcard__text:before {
+  .postcard.dark .postcard-text:before {
     background: #18151f;
   }
 }
@@ -290,11 +286,11 @@ body {
   background: #FF770E;
 }
 
-.postcard__title:hover {
+.postcard-title:hover {
   color: #FF770E;
 }
 
-.l-orange .postcard__bar {
+.l-orange .postcard-bar {
   background-color: #FF770E;
 }
 
@@ -310,6 +306,9 @@ body {
   background: #bd150b;
 }
 
+.l-title-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
 
 /* -------------------- HOME PAGE CSS - END -------------------- */
 
