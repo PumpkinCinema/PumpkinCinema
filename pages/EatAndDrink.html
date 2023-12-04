@@ -1,8 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- meta tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Savor a delightful dining experience at Pumpkin Cinema! Explore our menu filled with hot and tasty meals, sweet treats, and a variety of drinks. From hot dogs and nachos to delicious pastries and refreshing ice cream, we offer a perfect blend of flavours to enhance your movie night. Don't miss our special treat – enjoy half-price Ice Cream of the Day every day! Check out our menu and treat yourself to a cinematic feast at Pumpkin Cinema's Eat & Drink page.">
+    <meta name="keywords" content="Pumpkin Cinema, Eat & Drink, movie snacks, cinema dining, half-price cream, hot food">
+    <meta name="robots" content="index,follow"> 
+    <meta name="googlebot" content="index,follow">
+    <meta name="rating" content="general">
+    <!-- title -->
     <title>Eat & Drink</title>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -13,9 +21,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&display=swap"
+        rel="stylesheet">
     <!-- css & js -->
-    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -52,37 +62,125 @@
         </nav>
     </header>
 
-    <!-- Main Content-->
+    <!-- Eat & Drink Page Main Content -->
+    <!-- Page title and description -->
+    <h2 class="eat-and-drink-title display-4 text-center">Hot Food, Tasty Snacks, & Delicious Drinks!</h2>
 
-    <div class="eatanddrink_main row mt-5 mb-5 ms-3 me-3">
-        <div class="col-4 ">
-            <a href="#">
-                <img class="#" src="#" alt="#">
-            </a>
+    <hr class="menu-line">
+
+    <hr class="menu-line"><br>
+
+    <p class="text-center text-white lead">Turn your trip to Pumpkin Cinema into a cheerful dining experience with our
+        wide selection of made-for-cinema hot meals!<br>Treat yourself to nachos, hot dogs, popcorn and ice-cream with your date!</p><br>
+    <p class="text-center text-white lead">Want 10% off on delicious food and free popcorn on your birthday? Register as a member today!<br><a href="#" class="btn btn btn-primary m-2"> Sign up today! </a></p><br>
+
+    <div class="text-center">
+        <!-- Link to menu -->
+        <a href="#membership-menu-div" class="eat-and-drink-title display-6 me-4">Menu</a>
+        <!-- Game: Ice cream of the day -->
+        <a href="#" class="eat-and-drink-title display-6 ms-4" onclick="iceCreamOfTheDay()">Ice-Cream Of The Day (€1.5 only)</a>
+    </div><br>
+
+    <!-- Image slider -->
+    <div class="slider-container">
+        <div class="slider-wrapper" id="slider-wrapper">
+            <div class="slider-b" id="slider-b">
+                <img id="slider-1" src="../images/food1.jpg" alt="delicious popcorn at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+                <img id="slider-2" src="../images/food2.jpg" alt="delicious hot food at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+                <img id="slider-3" src="../images/food3.jpg" alt="ice cream different flavors at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+                <img id="slider-4" src="../images/food4.jpg" alt="freshly baked pastry at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+            </div>
+            <div class="slider-nav">
+                <a href="#slider-wrapper" onclick="changeSlide(0)"></a>
+                <a href="#slider-wrapper" onclick="changeSlide(1)"></a>
+                <a href="#slider-wrapper" onclick="changeSlide(2)"></a>
+                <a href="#slider-wrapper" onclick="changeSlide(3)"></a>
+            </div>
         </div>
-
-        <div class="col-4 ">
-            <a href="#">
-                <img class="#" src="#" alt="#">
-            </a>
-        </div>
-
-        <div class="col-4 ">
-            <a href="#">
-                <img class="#" src="#" alt="#">
-            </a>
-        </div>
-
     </div>
 
+    <!-- Menu button anchor -->
+    <p id="membership-menu-div"></p>
 
+    <!-- Menu section -->
+    <h2 class="eat-and-drink-title display-4 text-center">MENU</h2><br>
 
+    <hr class="menu-line">
+    <hr class="menu-line"><br>
 
+    <section class="membership-menu">
+        <div class="row text-white">
+            <div class="col-2"></div>
+            <div class="col-4 p-3 m-2 rounded border">
+                <h3 class="menu-title text-center"><u>HOT FOOD</u></h3>
+                <ul>
+                    <li>HOT DOG&nbsp; <B>€5</B></li>
+                    <li>NACHOS&nbsp; <B>€7</B></li>
+                    <li>SANDWICH&nbsp; <B>€8</B></li>
+                    <li>SAUSAGE ROLL&nbsp; <B>€5</B></li>
+                    <li>SAUSAGE ROLL(V)&nbsp; <B>€5</B></li>
+                    <li>SOUP OF THE DAY(WITH TOAST)&nbsp; <B>€6</B></li>
+                </ul>
+            </div>
+            <div class="col-4 p-3 m-2 rounded border">
+                <h3 class="menu-title text-center"><u>HOT DRINKS</u></h3>
+                <ul>
+                    <li>AMERICANO&nbsp; <B>€3</B></li>
+                    <li>ESPRESSO&nbsp; <B>€2.8</B></li>
+                    <li>CAPPUCCINO&nbsp; <B>€3.5</B></li>
+                    <li>LATTE&nbsp; <B>€3.5</B></li>
+                    <li>MOCHA&nbsp; <B>€4</B></li>
+                    <li>HERBAL TEA&nbsp; <B>€2</B></li>
+                    <li>HOT CHOCOLATE&nbsp; <B>€3.5</B></li>
+                </ul>
+                <ul>
+                    <li><em>Decaf coffee available on request.</em></li>
+                    <li><em>Soy/Almond/Oat milk available.</em></li>
+                </ul>
+            </div>
+            <div class="col-2"></div>
+        </div>
 
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        <div class="row text-white mb-5">
+            <div class="col-2 "></div>
+            <div class="col-4 p-3 m-2 rounded border">
+                <h3 class="menu-title text-center"><u>SWEET TREATS</u></h3>
+                <ul>
+                    <li>CAKE SLICE&nbsp; <B>€4</B></li>
+                    <li>CHOCOLATE CHIP COOKIEs&nbsp; <B>€2.5</B></li>
+                    <li>SALTED CARAMEL BROWNIE&nbsp; <B>€3</B></li>
+                    <li>BANANA & WALNUT BREAD&nbsp; <B>€3</B></li>
+                    <li>PASTRY&nbsp; (V) <B>€3</B></li>
+                    <li>ICE CREAM CONE&nbsp; <B>€3</B></li>
+                    <li>CHOCOLATE SUNDAE&nbsp; <B>€4</B></li>
+                    <li>STRAWBERRY SUNDAE&nbsp; <B>€4</B></li>
+                </ul>
+                <ul>
+                    <li><em>Available ice cream flavours: strawberry, chocolate chip, mint chocolate chip, vanilla,
+                            strawberry cheesecake, mango, cookies n' cream.</em> </li>
+                    <LI><em>ice cream of the day: HALF PRICE!</em></LI>
+                </ul>
+            </div>
+            <div class="col-4 p-3 m-2 rounded border">
+                <h3 class="menu-title text-center"><u>POPCORNS</u></h3>
+                <ul>
+                    <li>SMALL POPCORN&nbsp; <B>€4</B></li>
+                    <li>MEDIUM POPCORN&nbsp; <B>€5.5</B></li>
+                    <li>LARGE POPCORN&nbsp; <B>€6.5</B></li>
+                </ul>
+                <ul>
+                    <li>LARGE POPCORN & 1 SOFT DRINK&nbsp; <B>€8</B></li>
+                    <li>LARGE POPCORN & 2 SOFT DRINK&nbsp; <B>€9</B></li>
+
+                </ul>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </section>
+
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
 

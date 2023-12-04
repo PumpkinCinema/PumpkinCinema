@@ -58,10 +58,9 @@ body {
   .navbar .nav-link {
     color: #fff;
   }
+}
 
   /* --------------------------------------------------- */
-
-
 
   .banner-image {
     background-image: url('../images/jokerr.png');
@@ -74,7 +73,91 @@ body {
     border-color: #FF770E !important;
   }
 
-/* Membership Page */
+
+/* -------------------- Membership Page CSS - @Bintong -------------------- */
+.membership-title{
+  color:#FF770E ;
+  font-family: 'Crimson Text', serif;
+}
+
+.registration-submit{
+  background-color: #FF770E;
+  border-color: #FF770E;
+  color:white;
+  padding:8px 8px;
+  cursor:pointer;
+  border-radius: 10px;
+  font-size: large;
+  text-align: center;
+}
+/* --------------------------------------------------- */
 
 
-/* Eat & Drink Page */
+/* -------------------- Eat & Drink Page CSS - @Bintong -------------------- */
+.eat-and-drink-title{
+  color:#FF770E ;
+  font-family: 'Crimson Text', serif;
+  margin-top: 6rem;
+}
+
+.slider-container {
+  padding: 0.5rem;
+}
+
+.slider-wrapper {
+  position:relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  overflow:hidden; 
+}
+
+.slider-b{
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+
+.slider-b img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom:1.25rem;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:1;
+}
+
+.slider-nav a{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+  opacity: 1;
+}
+
+.menu-title{
+  color:#FF770E ;
+  font-family: 'Crimson Text', serif;
+}
+
+.menu-line{
+  border-top: 6px dotted #FF770E;
+  margin-left: 9rem;
+  margin-right: 9rem;
+}
+/* --------------------------------------------------- */

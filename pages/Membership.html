@@ -2,8 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- meta tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unlock exclusive benefits with Pumpkin Cinema's membership! Enjoy a 10% discount on delicious treats, half-price cinema tickets on Wednesdays, early access to exciting events, and even free popcorn on your birthday. Sign up today to elevate your movie experience and enjoy personalized perks just for you.">
+    <meta name="keywords" content="Pumpkin Cinema, membership benefits, movie discounts, cinema events, free popcorn, birthday treat, registration, youth membership, student membership, adult membership, senior membership">
+    <meta name="robots" content="index,follow"> 
+    <meta name="googlebot" content="index,follow">
+    <meta name="rating" content="general">
     <title>Membership</title>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -14,9 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&display=swap"
+        rel="stylesheet">
     <!-- css & js -->
-    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -53,81 +61,85 @@
         </nav>
     </header>
 
-    <!-- Main content -->
-    <div class="membership_main row mt-5 ms-3 me-3 py-3">
+    <!-- Membership Page Main Content -->
+    <!-- Membership description -->
+    <div class="row mt-5 ms-3 me-3 py-3">
         <div class="col-2 mt-5"></div>
-        <div class="col-sm-8 container-lg membership_content mt-5 p-5 text-white rounded border">
-            <h2 class="display-4 text-center">Member gets more!</h2>
-            <p class="text-center lead">Discover the perks of our exclusive membership!  </p>
-            <p class="text-center lead">By signing up today, you'll enjoy a range of benefits designed just for you: </p>
+        <div class="col-8 container-lg mt-5 p-5 text-white rounded border">
+            <h2 class="membership-title display-4 text-center">Member Gets More!</h2>
+            <p class="text-center lead">Discover the perks of our exclusive membership! <br> By signing up today, you'll
+                enjoy a range of benefits designed just for you: </p>
             <ol>
-                <li class="lead">10% Off on Food: Indulge in delicious treats and meals with a 10% discount when you flash your
+                <li class="lead"><b><u>10% Off on Food:</u></b> Indulge in delicious treats and meals with a 10% discount when
+                    you flash your
                     membership card.</li>
-                <li class="lead">Half-Price Cinema Tickets on Wednesdays (10 am - 11 pm): Make Wednesdays special with half-price
+                <li class="lead"><b><u>Half-Price Cinema Tickets on Wednesdays (10 am - 11 pm):</u></b> Make Wednesdays special
+                    with half-price
                     cinema tickets during this exclusive time window</li>
-                <li class="lead">Early Access to Events: Be the first to know and participate in exciting events with our early
+                <li class="lead"><b><u>Early Access to Events:</u></b> Be the first to know and participate in exciting events
+                    with our early
                     access privilege.</li>
-                <li class="lead">Free Popcorn on Your Birthday: Celebrate your special day with a complimentary bag of popcorn, our
+                <li class="lead"><b><u>Free Popcorn on Your Birthday:</u></b> Celebrate your special day with a complimentary
+                    bag of popcorn, our
                     way of making your birthday at the movies even more enjoyable.</li>
             </ol>
+            <!-- Link to the registration section -->
             <div class="text-center">
-                <a href="#" class="btn btn-lg btn-primary"> Sign up today! </button></a>
+                <a href="#membership-registration" class="btn btn-lg btn-primary"> Sign up today! </a>
             </div>
         </div>
         <div class="col-2"></div>
     </div>
 
-    <div class="membership_form row mt-5 mb-5 ms-3 me-3">
-        
+    <!-- Registration section -->
+    <div class="row mt-5 mb-5 ms-3 me-3">
         <div class="col-2 "></div>
-        <div class="col-sm-8 container membership_form_content p-5 text-white rounded border">
-            <p>form</p>
-            <form>
+        <div class="col-sm-8 container p-5 text-white rounded border text-center">
+
+            <form id="membership-form" onsubmit="return validateMembership() && submitb() ">
+                <h2 id="membership-registration" class="membership-title display-4">Registration</h2>
+
                 <label>First name*</label><br>
-                <input type="text" name="first_name" size="30" minlength="2" maxlength="30" required><br>
+                <input type="text" id="fname-b" name="fname" size="30" minlength="1" maxlength="30"><br>
 
                 <label>Last name*</label><br>
-                <input type="text" name="last_name" size="30" minlength="2" maxlength="30" required><br>
+                <input type="text" id="lname-b" name="lname" size="30" minlength="1" maxlength="30"><br>
 
                 <label>E-mail*</label><br>
-                <input type="email" name="email" size="30" placeholder="ex: myname@example.com" required><br>
+                <input type="email" id="email-b" name="email" size="30" placeholder="ex: myname@example.com"><br>
 
-                <label>Phone number</label><br>
-                <input type="tel" pattern="[0-9]{10}" name="phonenumber" placeholder="0123456789" required><br>
+                <label>Password (at least 8 characters)*</label><br>
+                <input type="password" id="passwd-b" name="passowd" size="30" minlength="8"><br>
 
-                <label>Membership type</label><br>
+                <label>Phone number*</label><br>
+                <input type="tel" id="phonenumber-b" pattern="[0-9]{10}" name="phonenumber"
+                    placeholder="ex: 0123456789"><br>
+
+                <label>Membership type*</label><br>
                 <select>
                     <option value="youth">Youth Membership (ages 13 - 17)</option>
-                    <option value="student">Student Membership (with valid student IDs)</option>
+                    <option value="student">Student Membership (with valid IDs)</option>
                     <option value="adule">Adult Membership</option>
                     <option value="senior">Senior Membership (ages 60+) </option>
-                </select> <br>
+                </select> <br><br>
 
-                <label>Would you like to receive our newsletter via email?</label><br>
-                <input type="radio" name="yes" value="yes">yes
-                <input type="radio" name="no" value="no">no<br>
+                <input type="checkbox" name="newsletter">
+                <label>I would like to receive newsletter via email</label><br><br>
 
-                <input type="checkbox" name="T&C">
-                <label>I agree to your T&C</label><br>
+                <label>I agree to your T&C*</label><br>
+                <input type="radio" name="agreeTandC" value="yes">yes
+                <input type="radio" name="agreeTandC" value="no">no<br><br>
 
-
+                <input type="submit" class="registration-submit" value="Click to Submit" onsubmit="submitb()">
             </form>
 
-            </form>
         </div>
         <div class="col-2 "></div>
     </div>
 
-
-
-
-
-
-    <!-- bootstrap  -->
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    </div>
 </body>
-
 </html>
