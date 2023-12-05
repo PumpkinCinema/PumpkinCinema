@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
 }
 
-/* -------------------- NAVBAR CSS - GLOBAL - START -------------------- */
+/* -------------------- NAVBAR CSS - GLOBAL - @Yinlian Deng-------------------- */
 .navbar {
   transition: all 0.4s;
 }
@@ -62,7 +62,7 @@ body {
 /* -------------------- NAVBAR CSS - GLOBAL - END------------------------------- */
 
 
-/* -------------------- HOME PAGE CSS - START - yinglian Deng -------------------- */
+/* -------------------- HOME PAGE CSS - @yinglian Deng -------------------- */
 .carousel {
   margin-bottom: 4rem;
 }
@@ -314,7 +314,7 @@ body {
 /* -------------------- HOME PAGE CSS - END -------------------- */
 
 
-/* -------------------- ABOUT US PAGE CSS - START - yinglian Deng -------------------- */
+/* -------------------- ABOUT US PAGE CSS - @yinglian Deng -------------------- */
 .l-title {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -380,4 +380,4 @@ form .form-control::-webkit-input-placeholder {
 .btn:hover {
   color: #ffffff;
 }
-/* -------------------- ABOUT US PAGE CSS - END - yinglian Deng -------------------- */
+/* -------------------- ABOUT US PAGE CSS - END -------------------- */
