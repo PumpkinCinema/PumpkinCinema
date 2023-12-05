@@ -34,7 +34,7 @@ $(function () {
 // The scroll event of the window is also being listened to. When the window is scrolled and the scroll distance is more than 10, the active class is added to elements with the navbar class. If the scroll distance is less than or equal to 10, the active class is removed.
 
 
-// JS for the BookTicket page 
+// JS for the BookTicket and WhatsOn page
 window.onload = function(){
     for(let i = 0; i < 8; i++){
         let date = new Date();
@@ -51,7 +51,7 @@ const totalPrice = document.getElementById("total-price-z");
 const selectMovie = document.getElementById("select-movie-z");
 const picked=[];
 
-
+// seat click event
 selectBox.addEventListener("click",
     e => {
         if (
@@ -77,6 +77,7 @@ function calculateTotalPrice() {
     totalPrice.innerText = picked.length * moviePrice;
 }
 
+// if user select a movie, then click ok, then turn to booking page
 function toBooking(){
     let x = confirm("Do you want to buy ticket for this movie?");
     if(x == true){
@@ -87,7 +88,9 @@ function toBooking(){
 let form = document.querySelector('form');
 const email = document.getElementById("input-email-z");
 
-// Add a submit event listener to the form
+// Add a submit event listener to the form,
+// validate the email,
+// validate the seat selection
 form.addEventListener('submit', (event) => {
 
     let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
