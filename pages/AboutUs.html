@@ -94,14 +94,14 @@
                     <p class="text-white">Use the form below to share your questions, ideas,
                         comments and feedback</p>
                 </div>
-                <form class="" onsubmit="event.preventDefault()">
+                <form id="l-submit-form" onsubmit="event.preventDefault()">
                     <div class="l-card">
                         <p class="mb-1 text-white">Email</p>
-                        <input id="e-mail" type="email" placeholder="Enter your email" name="email"
-                            class="form-control input-box mb-3" required>
-                        <p class="mb-1 text-white">Message</p> <textarea id="message" type="text" placeholder="Enter your message"
+                        <input id="le-mail" type="email" placeholder="Enter your email" name="email"
+                            class="form-control input-box mb-3">
+                        <p class="mb-1 text-white">Message</p> <textarea id="l-message" type="text" placeholder="Enter your message"
                             name="message" class="form-control input-box mb-4"></textarea>
-                        <input type="submit" value="Submit" class="btn btn-block btn-purple">
+                        <input id="l-submit" type="submit" value="Submit" class="btn btn-block btn-purple">
                     </div>
                 </form>
             </div>
