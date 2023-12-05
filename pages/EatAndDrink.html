@@ -5,9 +5,11 @@
     <!-- meta tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Savor a delightful dining experience at Pumpkin Cinema! Explore our menu filled with hot and tasty meals, sweet treats, and a variety of drinks. From hot dogs and nachos to delicious pastries and refreshing ice cream, we offer a perfect blend of flavours to enhance your movie night. Don't miss our special treat – enjoy half-price Ice Cream of the Day every day! Check out our menu and treat yourself to a cinematic feast at Pumpkin Cinema's Eat & Drink page.">
-    <meta name="keywords" content="Pumpkin Cinema, Eat & Drink, movie snacks, cinema dining, half-price cream, hot food">
-    <meta name="robots" content="index,follow"> 
+    <meta name="description"
+        content="Savor a delightful dining experience at Pumpkin Cinema! Explore our menu filled with hot and tasty meals, sweet treats, and a variety of drinks. From hot dogs and nachos to delicious pastries and refreshing ice cream, we offer a perfect blend of flavours to enhance your movie night. Don't miss our special treat – enjoy half-price Ice Cream of the Day every day! Check out our menu and treat yourself to a cinematic feast at Pumpkin Cinema's Eat & Drink page.">
+    <meta name="keywords"
+        content="Pumpkin Cinema, Eat & Drink, movie snacks, cinema dining, half-price cream, hot food">
+    <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="rating" content="general">
     <!-- title -->
@@ -20,8 +22,8 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Nunito+Sans:opsz@6..12&family=Crimson+Text:ital,wght@1,400;1,700&display=swap"
         rel="stylesheet">
     <!-- css & js -->
     <script src="../js/main.js"></script>
@@ -29,7 +31,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar - @Yinglian -->
     <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top py-3">
             <div class="container">
@@ -44,17 +46,17 @@
 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#"
+                        <li class="nav-item active"><a href="../index.html"
                                 class="nav-link text-uppercase font-weight-bold">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">What's On</a>
+                        <li class="nav-item"><a href="./WhatsOn" class="nav-link text-uppercase font-weight-bold">What's On</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Membership</a>
+                        <li class="nav-item"><a href="./Membership.html" class="nav-link text-uppercase font-weight-bold">Membership</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                        <li class="nav-item"><a href="./BookTicket" class="nav-link text-uppercase font-weight-bold">Book Now</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                        <li class="nav-item"><a href="./EatAndDrink.html" class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About Us</a>
+                        <li class="nav-item"><a href="./AboutUs.html" class="nav-link text-uppercase font-weight-bold">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -62,39 +64,60 @@
         </nav>
     </header>
 
-    <!-- Eat & Drink Page Main Content -->
+    <!-- Eat & Drink Page Content - @Bintong -->
+
     <!-- Page title and description -->
-    <h2 class="eat-and-drink-title display-4 text-center">Hot Food, Tasty Snacks, & Delicious Drinks!</h2>
+    <h2 class="eat-and-drink-title display-3 text-center">Hot Food, Tasty Snacks, & Delicious Drinks!</h2>
 
     <hr class="menu-line">
-
     <hr class="menu-line"><br>
 
-    <p class="text-center text-white lead">Turn your trip to Pumpkin Cinema into a cheerful dining experience with our
-        wide selection of made-for-cinema hot meals!<br>Treat yourself to nachos, hot dogs, popcorn and ice-cream with your date!</p><br>
-    <p class="text-center text-white lead">Want 10% off on delicious food and free popcorn on your birthday? Register as a member today!<br><a href="#" class="btn btn btn-primary m-2"> Sign up today! </a></p><br>
+    <p class="text-center text-white lead main-text-b">Turn your trip to Pumpkin Cinema into a cheerful dining
+        experience with our
+        wide selection of made-for-cinema hot meals!<br>Treat yourself to nachos, hot dogs, popcorn and ice-cream with
+        your date!</p><br>
+    <p class="text-center text-white lead main-text-b">Want 10% off on delicious food and free popcorn on your birthday?
+        Register as a member today!<br><br>
+        <a href="./Membership.html" class="btn btn-lg btn-primary m-2"> Sign up today! </a>
+    </p><br>
 
-    <div class="text-center">
-        <!-- Link to menu -->
-        <a href="#membership-menu-div" class="eat-and-drink-title display-6 me-4">Menu</a>
-        <!-- Game: Ice cream of the day -->
-        <a href="#" class="eat-and-drink-title display-6 ms-4" onclick="iceCreamOfTheDay()">Ice-Cream Of The Day (€1.5 only)</a>
-    </div><br>
+    <div class="d-flex justify-content-center">
+        <div class="text-center eat-and-drink-buttons">
+            <!-- Link to menu -->
+            <a href="#membership-menu-div" class="eat-and-drink-title display-6 me-4">Menu</a>
+            <!-- Game: Ice cream of the day -->
+            <a href="javascript:void(0)" class="eat-and-drink-title display-6 ms-4" onclick="iceCreamOfTheDay()">Ice-Cream Of The Day
+                (€1.5 only)</a>
+        </div><br>
+    </div>
 
     <!-- Image slider -->
     <div class="slider-container">
         <div class="slider-wrapper" id="slider-wrapper">
             <div class="slider-b" id="slider-b">
-                <img id="slider-1" src="../images/food1.jpg" alt="delicious popcorn at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
-                <img id="slider-2" src="../images/food2.jpg" alt="delicious hot food at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
-                <img id="slider-3" src="../images/food3.jpg" alt="ice cream different flavors at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
-                <img id="slider-4" src="../images/food4.jpg" alt="freshly baked pastry at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+                <img id="slider-1" src="../images/food1.jpg" alt="freshly brew coffee at Pumpkin Cinema"
+                    onclick="eatAndDrinkDiscount()">
+                    <!-- Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/funny-bright-jack-o-lantern_1323391.htm" -->
+                <img id="slider-2" src="../images/food2.jpg"
+                    alt="freshly popped and butter-kissed popcorn at Pumpkin Cinema" onclick="eatAndDrinkDiscount()">
+                    <!-- Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/top-view-cinema-tickets-popcorn_7151864.htm" -->
+                <img id="slider-3" src="../images/food3.jpg"
+                    alt="creamy smooth ice cream in different flavours at Pumpkin Cinema"
+                    onclick="eatAndDrinkDiscount()">
+                    <!-- Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/delicious-ice-cream_7184422.htm#page=2&query=ice%20cream&position=32&from_view=search&track=ais&uuid=6a1c168a-085c-4e39-9f43-38d4ceccfd8c" -->
+                <img id="slider-4" src="../images/food4.jpg" alt="delicious made-for-cinema hot food at Pumpkin Cinema"
+                    onclick="eatAndDrinkDiscount()">
+                    <!-- Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/overhead-shot-variety-fast-food-meat-snacks_14110085.htm" -->
+                <img id="slider-5" src="../images/food5.jpg" alt="freshly baked pastry at Pumpkin Cinema"
+                    onclick="eatAndDrinkDiscount()">
+                    <!-- Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/sweet-pastry-assortment-top-view_7781342.htm" -->
             </div>
             <div class="slider-nav">
-                <a href="#slider-wrapper" onclick="changeSlide(0)"></a>
-                <a href="#slider-wrapper" onclick="changeSlide(1)"></a>
-                <a href="#slider-wrapper" onclick="changeSlide(2)"></a>
-                <a href="#slider-wrapper" onclick="changeSlide(3)"></a>
+                <a href="javascript:void(0)" onclick="changeSlide(0)"></a>
+                <a href="javascript:void(0)" onclick="changeSlide(1)"></a>
+                <a href="javascript:void(0)" onclick="changeSlide(2)"></a>
+                <a href="javascript:void(0)" onclick="changeSlide(3)"></a>
+                <a href="javascript:void(0)" onclick="changeSlide(4)"></a>
             </div>
         </div>
     </div>
@@ -109,74 +132,118 @@
     <hr class="menu-line"><br>
 
     <section class="membership-menu">
-        <div class="row text-white">
+        <div class="row text-white mb-4">
             <div class="col-2"></div>
-            <div class="col-4 p-3 m-2 rounded border">
-                <h3 class="menu-title text-center"><u>HOT FOOD</u></h3>
-                <ul>
-                    <li>HOT DOG&nbsp; <B>€5</B></li>
-                    <li>NACHOS&nbsp; <B>€7</B></li>
-                    <li>SANDWICH&nbsp; <B>€8</B></li>
-                    <li>SAUSAGE ROLL&nbsp; <B>€5</B></li>
-                    <li>SAUSAGE ROLL(V)&nbsp; <B>€5</B></li>
-                    <li>SOUP OF THE DAY(WITH TOAST)&nbsp; <B>€6</B></li>
-                </ul>
+            <!-- Menu 1 -->
+            <div class="col-sm-4 m-2">
+                <div class="card menu-card">
+                    <img src="../images/food4.jpg" class="card-img-top"
+                        alt="delicious made-for-cinema hot food at Pumpkin Cinema">
+                    <div class="card-body">
+                        <h3 class="menu-title text-center"><u>HOT FOOD</u></h3>
+                        <div class="card-text">
+                            <ul>
+                                <li>HOT DOG&nbsp; <B>€5</B></li>
+                                <li>NACHOS&nbsp; <B>€7</B></li>
+                                <li>SANDWICH&nbsp; <B>€8</B></li>
+                                <li>SAUSAGE ROLL&nbsp; <B>€5</B></li>
+                                <li>SAUSAGE ROLL(V)&nbsp; <B>€5</B></li>
+                                <li>SOUP OF THE DAY(WITH TOAST)&nbsp; <B>€6</B></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 p-3 m-2 rounded border">
-                <h3 class="menu-title text-center"><u>HOT DRINKS</u></h3>
-                <ul>
-                    <li>AMERICANO&nbsp; <B>€3</B></li>
-                    <li>ESPRESSO&nbsp; <B>€2.8</B></li>
-                    <li>CAPPUCCINO&nbsp; <B>€3.5</B></li>
-                    <li>LATTE&nbsp; <B>€3.5</B></li>
-                    <li>MOCHA&nbsp; <B>€4</B></li>
-                    <li>HERBAL TEA&nbsp; <B>€2</B></li>
-                    <li>HOT CHOCOLATE&nbsp; <B>€3.5</B></li>
-                </ul>
-                <ul>
-                    <li><em>Decaf coffee available on request.</em></li>
-                    <li><em>Soy/Almond/Oat milk available.</em></li>
-                </ul>
+
+            <!-- Menu 2 -->
+            <div class="col-sm-4 m-2">
+                <div class="card menu-card">
+                    <img src="../images/food1.jpg" class="card-img-top" alt="freshly brew coffee at Pumpkin Cinema">
+                    <div class="card-body">
+                        <h3 class="menu-title text-center"><u>HOT DRINKS</u></h3>
+                        <div class="card-text">
+                            <ul>
+                                <li>AMERICANO&nbsp; <B>€3</B></li>
+                                <li>ESPRESSO&nbsp; <B>€2.8</B></li>
+                                <li>CAPPUCCINO&nbsp; <B>€3.5</B></li>
+                                <li>LATTE&nbsp; <B>€3.5</B></li>
+                                <li>MOCHA&nbsp; <B>€4</B></li>
+                                <li>HERBAL TEA&nbsp; <B>€2</B></li>
+                                <li>HOT CHOCOLATE&nbsp; <B>€3.5</B></li>
+                            </ul>
+                            <ul>
+                                <li><em>Decaf coffee available on request.</em></li>
+                                <li><em>Soy/Almond/Oat milk available.</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-2"></div>
         </div>
 
-        <div class="row text-white mb-5">
-            <div class="col-2 "></div>
-            <div class="col-4 p-3 m-2 rounded border">
-                <h3 class="menu-title text-center"><u>SWEET TREATS</u></h3>
-                <ul>
-                    <li>CAKE SLICE&nbsp; <B>€4</B></li>
-                    <li>CHOCOLATE CHIP COOKIEs&nbsp; <B>€2.5</B></li>
-                    <li>SALTED CARAMEL BROWNIE&nbsp; <B>€3</B></li>
-                    <li>BANANA & WALNUT BREAD&nbsp; <B>€3</B></li>
-                    <li>PASTRY&nbsp; (V) <B>€3</B></li>
-                    <li>ICE CREAM CONE&nbsp; <B>€3</B></li>
-                    <li>CHOCOLATE SUNDAE&nbsp; <B>€4</B></li>
-                    <li>STRAWBERRY SUNDAE&nbsp; <B>€4</B></li>
-                </ul>
-                <ul>
-                    <li><em>Available ice cream flavours: strawberry, chocolate chip, mint chocolate chip, vanilla,
-                            strawberry cheesecake, mango, cookies n' cream.</em> </li>
-                    <LI><em>ice cream of the day: HALF PRICE!</em></LI>
-                </ul>
+        <div class="row text-white mb-4">
+            <div class="col-2"></div>
+            <!-- Menu 3 -->
+            <div class="col-sm-4 m-2">
+                <div class="card menu-card">
+                    <img src="../images/food3.jpg" class="card-img-top"
+                        alt="creamy smooth ice cream in different flavours at Pumpkin Cinema">
+                    <div class="card-body">
+                        <h3 class="menu-title text-center"><u>SWEET TREATS</u></h3>
+                        <div class="card-text">
+                            <ul>
+                                <li>CAKE SLICE&nbsp; <B>€4</B></li>
+                                <li>CHOCOLATE CHIP COOKIEs&nbsp; <B>€2.5</B></li>
+                                <li>SALTED CARAMEL BROWNIE&nbsp; <B>€3</B></li>
+                                <li>BANANA & WALNUT BREAD&nbsp; <B>€3</B></li>
+                                <li>PASTRY&nbsp; (V) <B>€3</B></li>
+                                <li>ICE CREAM CONE&nbsp; <B>€3</B></li>
+                                <li>CHOCOLATE SUNDAE&nbsp; <B>€4</B></li>
+                                <li>STRAWBERRY SUNDAE&nbsp; <B>€4</B></li>
+                            </ul>
+                            <ul>
+                                <li><em>Available ice cream flavours: strawberry, chocolate chip, mint chocolate chip,
+                                        vanilla,
+                                        strawberry cheesecake, mango, cookies n' cream.</em> </li>
+                                <LI><em>ice cream of the day: <a href="javascript:void(0)" onclick="iceCreamOfTheDay()">HALF PRICE!</a></em></LI>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4 p-3 m-2 rounded border">
-                <h3 class="menu-title text-center"><u>POPCORNS</u></h3>
-                <ul>
-                    <li>SMALL POPCORN&nbsp; <B>€4</B></li>
-                    <li>MEDIUM POPCORN&nbsp; <B>€5.5</B></li>
-                    <li>LARGE POPCORN&nbsp; <B>€6.5</B></li>
-                </ul>
-                <ul>
-                    <li>LARGE POPCORN & 1 SOFT DRINK&nbsp; <B>€8</B></li>
-                    <li>LARGE POPCORN & 2 SOFT DRINK&nbsp; <B>€9</B></li>
 
-                </ul>
+            <!-- Menu 4 -->
+            <div class="col-sm-4 m-2">
+                <div class="card menu-card">
+                    <img src="../images/food2.jpg" class="card-img-top"
+                        alt="freshly popped and butter-kissed popcorn at Pumpkin Cinema">
+                    <div class="card-body">
+                        <h3 class="menu-title text-center"><u>POPCORNS</u></h3>
+                        <div class="card-text">
+                            <ul>
+                                <li>SMALL POPCORN&nbsp; <B>€4</B></li>
+                                <li>MEDIUM POPCORN&nbsp; <B>€5.5</B></li>
+                                <li>LARGE POPCORN&nbsp; <B>€6.5</B></li>
+                            </ul>
+                            <ul>
+                                <li>LARGE POPCORN & 1 SOFT DRINK&nbsp; <B>€8</B></li>
+                                <li>LARGE POPCORN & 2 SOFT DRINK&nbsp; <B>€9</B></li>
+
+                            </ul>
+                            <ul>
+                                <li><em>Free popcorn on your birthday if you join the membership today! <a href="./Membership.html">SIGN UP HERE</a></em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-2"></div>
         </div>
     </section>
+
+    <!-- Footer - @Yinglian -->
+
 
     <!-- bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

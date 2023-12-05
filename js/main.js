@@ -126,6 +126,9 @@ function updateSliderPosition() {
 }
 
 //Click on slider images - @Bintong
-function eatAndDrinkDiscount(){
-    alert("Members gets 10% off food and free popcorn on their birthday! Sign up with us today!");
+function eatAndDrinkDiscount() {
+    let x = confirm("Members get 10% off food and free popcorn on birthday! Would you like to sign up today?");
+    if (x == true) {
+        window.open("Membership.html", "_blank");
+    }
 }
