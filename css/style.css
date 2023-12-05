@@ -1,5 +1,7 @@
 body {
   background: url('../images/background.jpg') no-repeat center center fixed;
+  /* Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/funny-bright-jack-o-lantern_1323391.htm" */
+  
   min-height: 100vh;
 }
 
@@ -72,8 +74,7 @@ body {
     background-color: #FF770E !important;
     border-color: #FF770E !important;
   }
-
-
+  
 /* -------------------- Membership Page CSS - @Bintong -------------------- */
 .membership-title{
   color:#FF770E ;
@@ -90,6 +91,10 @@ body {
   font-size: large;
   text-align: center;
 }
+
+.main-text-b{
+  font-family: 'Nunito Sans', sans-serif;
+}
 /* --------------------------------------------------- */
 
 
@@ -98,6 +103,27 @@ body {
   color:#FF770E ;
   font-family: 'Crimson Text', serif;
   margin-top: 6rem;
+}
+
+.eat-and-drink-buttons{
+  background-color: rgba(0, 0, 0, 0.5);
+  display:inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.menu-card{
+  height:100%
+}
+
+.card-body{
+  opacity: 0.8;
+}
+
+.card-img-top{
+  width:100%;
+  object-fit:cover;
 }
 
 .slider-container {
