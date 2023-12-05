@@ -93,66 +93,145 @@ function validateMembership() {
     return true;
 }
 
-//Membership form submit - @Bintong
-function submitb() {
-    alert("Thank you for your registration!");
-}
 
-//Game - Ice cream of the day - @Bintong
-function iceCreamOfTheDay() {
-    var messageB;
-    var inputB = prompt("To find out the half price ice cream of the day, please enter the day of today(ex: monday):", " ");
 
-    if (inputB !== null && inputB !== '') {
-        switch (inputB.toLowerCase()) {
-            case 'monday':
-                messageB = "Ice cream of the day: STRAWBERRY - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'tuesday':
-                messageB = "Ice cream of the day: CHOCOLATE CHIP - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'wednesday':
-                messageB = "Ice cream of the day: MINT CHOCOLATE CHIP - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'thursday':
-                messageB = "Ice cream of the day: VANILLA - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'friday':
-                messageB = "Ice cream of the day: STRAWBERRY CHEESECAKE - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'saturday':
-                messageB = "Ice cream of the day: MANGO - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            case 'sunday':
-                messageB = "Ice cream of the day: COOKIES N' CREAM - HALF PRICE FOR €1.5 ONLY!";
-                break;
-            default:
-                messageB = "Please enter a valid day!";
+
+        //Membership form submit - @Bintong
+        function submitb() {
+            alert("Thank you for your registration!");
         }
-        alert(messageB);
-    } else {
-        messageB = "Please enter a valid day!";
-        alert(messageB);
-    }
-}
 
-//Corresponding slider - @Bintong
-let currentSlide = 0;
+        //Game - Ice cream of the day - @Bintong
+        function iceCreamOfTheDay() {
+            var messageB;
+            var inputB = prompt("To find out the half price ice cream of the day, please enter the day of today(ex: monday):", " ");
 
-function changeSlide(slideIndex) {
-    currentSlide = slideIndex;
-    updateSliderPosition();
-}
+            if (inputB !== null && inputB !== '') {
+                switch (inputB.toLowerCase()) {
+                    case 'monday':
+                        messageB = "Ice cream of the day: STRAWBERRY - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'tuesday':
+                        messageB = "Ice cream of the day: CHOCOLATE CHIP - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'wednesday':
+                        messageB = "Ice cream of the day: MINT CHOCOLATE CHIP - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'thursday':
+                        messageB = "Ice cream of the day: VANILLA - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'friday':
+                        messageB = "Ice cream of the day: STRAWBERRY CHEESECAKE - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'saturday':
+                        messageB = "Ice cream of the day: MANGO - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    case 'sunday':
+                        messageB = "Ice cream of the day: COOKIES N' CREAM - HALF PRICE FOR €1.5 ONLY!";
+                        break;
+                    default:
+                        messageB = "Please enter a valid day!";
+                }
+                alert(messageB);
+            } else {
+                messageB = "Please enter a valid day!";
+                alert(messageB);
+            }
+        }
 
-function updateSliderPosition() {
-    const slider = document.getElementById('slider-b');
-    slider.scrollLeft = currentSlide * slider.clientWidth;
-}
+        //Corresponding slider - @Bintong
+        let currentSlide = 0;
 
-//Click on slider images - @Bintong
-function eatAndDrinkDiscount() {
-    let x = confirm("Members get 10% off food and free popcorn on birthday! Would you like to sign up today?");
-    if (x == true) {
-        window.open("Membership.html", "_blank");
-    }
-}
+        function changeSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateSliderPosition();
+        }
+
+        function updateSliderPosition() {
+            const slider = document.getElementById('slider-b');
+            slider.scrollLeft = currentSlide * slider.clientWidth;
+        }
+
+        //Click on slider images - @Bintong
+        function eatAndDrinkDiscount() {
+            let x = confirm("Members get 10% off food and free popcorn on birthday! Would you like to sign up today?");
+            if (x == true) {
+                window.open("Membership.html", "_blank");
+            }
+        }
+
+
+
+        // JS for the BookTicket and WhatsOn page -- @Zhenghao-Cui
+        window.onload = function () {
+            for (let i = 0; i < 8; i++) {
+                let date = new Date();
+                date.setDate(date.getDate() + i);
+                document.getElementById("select-day" + (i + 1) + "-z").innerHTML = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
+            }
+            return true;
+        }
+
+        //seat click event
+        const selectBox = document.querySelector(".select-zone-z");
+        const pickedSeat = document.getElementById("picked-seat-z");
+        const totalPrice = document.getElementById("total-price-z");
+        const selectMovie = document.getElementById("select-movie-z");
+        const picked = [];
+
+        // seat click event
+        selectBox.addEventListener("click",
+            e => {
+                if (
+                    e.target.classList.contains("seat-z") &&
+                    !e.target.classList.contains("seat-occupied-z")
+                ) {
+                    e.target.classList.toggle("seat-selected-z");
+                }
+
+                let seats = document.getElementsByClassName("seat-selected-z");
+                picked.length = 0;  //reset array
+                for (let i = 0; i < seats.length; i++) {
+                    picked[i] = seats[i].getAttribute("data-value") + " ";
+                }
+
+                pickedSeat.innerText = picked.toString();
+                calculateTotalPrice();
+
+            });
+
+        function calculateTotalPrice() {
+            let moviePrice = selectMovie.options[selectMovie.selectedIndex].value;
+            totalPrice.innerText = picked.length * moviePrice;
+        }
+
+        // if user select a movie, then click ok, then turn to booking page
+        function toBooking() {
+            let x = confirm("Do you want to buy ticket for this movie?");
+            if (x == true) {
+                window.location.href = "BookTicket.html";
+            }
+        }
+
+        let form = document.querySelector('form-z');
+        const emailz = document.getElementById("input-email-z");
+
+        // Add a submit event listener to the form,
+        // validate the email,
+        // validate the seat selection
+        form.addEventListener('submit', (event) => {
+
+            let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+            let s = emailz.value;
+
+            if (!regex.test(s)) {
+                event.preventDefault();
+                alert("Invalid Email");
+
+            } else if (picked.length == 0) {
+                alert("Please select seats.");
+
+            } else {
+                alert("Booking Success!")
+            }
+        });
