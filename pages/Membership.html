@@ -2,38 +2,195 @@
 <html lang="en">
 
 <head>
+    <!-- meta tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Unlock exclusive benefits with Pumpkin Cinema's membership! Enjoy a 10% discount on delicious treats, half-price cinema tickets on Wednesdays, early access to exciting events, and even free popcorn on your birthday. Sign up today to elevate your movie experience and enjoy personalized perks just for you.">
+    <meta name="keywords"
+        content="Pumpkin Cinema, membership benefits, movie discounts, cinema events, free popcorn, birthday treat, registration, youth membership, student membership, adult membership, senior membership">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="rating" content="general">
     <title>Membership</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Hedvig+Letters+Serif:opsz@12..24&family=Crimson+Text:ital,wght@1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- css & js -->
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div class="membership_main">
-        <div class="membership_banner">
-            <div class="row">
-            <div class="col-5">
-            <img src="../images/people-cinema.jpg" alt="cinema audience">
+    <!-- Navbar - @Yinglian -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="../images/logo.svg" alt="logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="../index.html"
+                                class="nav-link text-uppercase font-weight-bold">Home</a></li>
+                        <li class="nav-item"><a href="./WhatsOn.html"
+                                class="nav-link text-uppercase font-weight-bold">What's
+                                On</a>
+                        </li>
+                        <li class="nav-item"><a href="./Membership.html"
+                                class="nav-link text-uppercase font-weight-bold">Membership</a>
+                        </li>
+                        <li class="nav-item"><a href="./BookTicket.html"
+                                class="nav-link text-uppercase font-weight-bold">Book Now</a>
+                        </li>
+                        <li class="nav-item"><a href="./EatAndDrink.html"
+                                class="nav-link text-uppercase font-weight-bold">Eat&Drink</a>
+                        </li>
+                        <li class="nav-item"><a href="./AboutUs.html"
+                                class="nav-link text-uppercase font-weight-bold">About Us</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    <!-- Membership Page Content - @Bintong -->
+
+    <!-- Membership description -->
+    <div class="row mt-5 ms-3 me-3 py-3">
+        <div class="col-2 mt-5"></div>
+        <div class="col-8 container-lg mt-5 p-5 text-white rounded border">
+            <h2 class="membership-title display-3 text-center">Member Gets More!</h2>
+            <p class="text-center lead">Discover the perks of our exclusive membership! <br> By signing up today, you'll
+                enjoy a range of benefits designed just for you: </p>
+            <ol>
+                <li class="lead main-text-b"><b><u>10% Off on Food:</u></b> Indulge in delicious treats and meals with a
+                    10% discount when
+                    you flash your
+                    membership card.</li>
+                <li class="lead main-text-b"><b><u>Half-Price Cinema Tickets on Wednesdays (10 am - 11 pm):</u></b> Make
+                    Wednesdays special
+                    with half-price
+                    cinema tickets during this exclusive time window</li>
+                <li class="lead main-text-b"><b><u>Early Access to Events:</u></b> Be the first to know and participate
+                    in exciting events
+                    with our early
+                    access privilege.</li>
+                <li class="lead main-text-b"><b><u>Free Popcorn on Your Birthday:</u></b> Celebrate your special day
+                    with a complimentary
+                    bag of popcorn, our
+                    way of making your birthday at the movies even more enjoyable.</li>
+            </ol>
+            <!-- Link to the registration section -->
+            <div class="text-center">
+                <a href="#membership-registration" class="btn btn-lg btn-warning"> Sign up today! </a>
             </div>
         </div>
+        <div class="col-2"></div>
     </div>
 
-    
+    <!-- Registration section -->
+    <div class="row mt-5 mb-5 ms-3 me-3">
+        <div class="col-2 "></div>
+        <div class="col-sm-8 container p-5 text-white rounded border text-center">
+
+            <form id="membership-form" onsubmit="return validateMembership() && submitb() ">
+                <h2 id="membership-registration" class="membership-title display-4">Registration</h2>
+
+                <label>First name*</label><br>
+                <input type="text" id="fname-b" name="fname" size="30" minlength="1" maxlength="30"><br>
+
+                <label>Last name*</label><br>
+                <input type="text" id="lname-b" name="lname" size="30" minlength="1" maxlength="30"><br>
+
+                <label>E-mail*</label><br>
+                <input type="email" id="email-b" name="email" size="30" placeholder="ex: myname@example.com"><br>
+
+                <label>Password (at least 8 characters)*</label><br>
+                <input type="password" id="passwd-b" name="passowd" size="30" minlength="8"><br>
+
+                <label>Phone number*</label><br>
+                <input type="tel" id="phonenumber-b" pattern="[0-9]{10}" name="phonenumber"
+                    placeholder="ex: 0123456789"><br>
+
+                <label>Membership type*</label><br>
+                <select>
+                    <option value="youth">Youth Membership (ages 13 - 17)</option>
+                    <option value="student">Student Membership (with valid IDs)</option>
+                    <option value="adule">Adult Membership</option>
+                    <option value="senior">Senior Membership (ages 60+) </option>
+                </select> <br><br>
+
+                <input type="checkbox" name="newsletter">
+                <label>I would like to receive newsletter via email</label><br><br>
+
+                <label>I agree to your T&C*</label><br>
+                <input type="radio" name="agreeTandC" value="yes">yes
+                <input type="radio" name="agreeTandC" value="no">no<br><br>
+
+                <input type="submit" class="registration-submit" value="Click to Submit" onsubmit="submitb()">
+            </form>
+
+        </div>
+        <div class="col-2 "></div>
+    </div>
+
+    <!-- Footer - @Yinglian -->
+    <footer class="bg-dark text-white text-center text-lg-start">
+        <div class="container p-4">
+            <div class="row py-5">
+                <div class="col-lg-4 mb-5 text-center">
+                    <img src="../images/logo.svg" alt="logo" width="200">
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Pumpkin Cinema</h5>
+                    <p>
+                        Pumpkin Cinema is a cinema located in Dublin, Ireland. It was opened in 2021, and is one of the
+                        most modern cinemas in the world.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="tel:012345678" class="text-white">Phone: 01 234 5678</a>
+                        </li>
+                        <li>
+                            <a href="mailto:pumpkinCinema@gmail.com" class="text-white">Email:
+                                pumpkinCinema@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/National+College+of+Ireland/@53.3489292,-6.2455677,17z/data=!3m1!4b1!4m6!3m5!1s0x48670e8cd86e97e7:0x6d51b774ee7fa935!8m2!3d53.3489292!4d-6.2429928!16s%2Fm%2F0269tk2?entry=ttu"
+                                class="text-white">Address: 123 Main Street, Dublin, Ireland</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center">© Pumpkin Cinema 2023</p>
+        </div>
+    </footer>
 
 
-
-    <!-- bootstrap  -->
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    </div>
 </body>
 
 </html>
