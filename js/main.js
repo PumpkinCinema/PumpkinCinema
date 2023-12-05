@@ -105,9 +105,3 @@ form.addEventListener('submit', (event) => {
     }
 
 });
-
-
-
- 
-
-// JS for the WhatsOn page 
