@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+    <!-- Google fonts: Nunito Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
     <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -54,10 +58,11 @@
 
 <!-- Booking Section -->
 <div class="container text-white">
-    <div class="row ">
+    <div class="row book-main-z">
 
-<!--    Seat Selection -->
-        <div class="col-md-6 container-md select-box-z ">
+<!-- Seat Selection -->
+         <div class="col-lg-2"></div>
+        <div class="col-lg-4 select-box-z ">
             <br>
 
 <!--        Seat Selection Showcase -->
@@ -148,77 +153,103 @@
 
         </div>
 
-<!--    Select the day, movie and fill the email-->
-        <div class="col-md-6 container-md select-submit-z ">
-            <form>
-<!--                select the day-->
-                <p>Date:</p>
+<!-- Select the day, movie and fill the email-->
+        <div class="col-lg-4 select-submit-z pt-4">
+            <form class="needs-validation">
+<!-- select the day-->
+                <p class="fs-2">Date:</p>
                 <div class="select-date-z">
 
-                    <input type="radio" class="btn-check btn-warning " name="date" id="day1" autocomplete="off" checked>
+                    <input type="radio" class="btn-check btn-warning " name="date" id="day1" checked>
                     <label class="btn btn-outline-warning btn-sm m-1 " for="day1" id="select-day1-z">day1</label>
 
-                    <input type="radio" class="btn-check btn-warning" name="date" id="day2" autocomplete="off">
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day2" >
                     <label class="btn btn-outline-warning btn-sm m-1" for="day2" id="select-day2-z">day2</label>
 
-                    <input type="radio" class="btn-check btn-warning" name="date" id="day3" autocomplete="off">
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day3" >
                     <label class="btn btn-outline-warning btn-sm m-1" for="day3" id="select-day3-z">day3</label>
 
-                    <input type="radio" class="btn-check btn-warning" name="date" id="day4" autocomplete="off">
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day4" >
                     <label class="btn btn-outline-warning btn-sm m-1" for="day4" id="select-day4-z">day4</label>
 
-                    <input type="radio" class="btn-check btn-warning" name="date" id="day5" autocomplete="off">
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day5" >
                     <label class="btn btn-outline-warning btn-sm m-1" for="day5" id="select-day5-z">day5</label>
 
-                    <input type="radio" class="btn-check btn-warning" name="date" id="day6" autocomplete="off">
+                    <input type="radio" class="btn-check btn-warning" name="date" id="day6" >
                     <label class="btn btn-outline-warning btn-sm m-1" for="day6" id="select-day6-z">day5</label>
                 </div>
 
-<!--                display the selected seat -->
+<!-- display the selected seat -->
                 <div>
-                    <p>Seat:</p>
-                    <div id="picked-seat-z" class="text-wrap"></div>
+                    <p class="fs-2 mt-2">Seat:</p>
+                    <div id="picked-seat-z" class="text-wrap fs-3"></div>
                 </div>
 
-<!--                select a movie -->
+<!-- select a movie -->
                 <div>
-                    <label for="movie">Pick a movie:<br>
-                        <select id="movie">
-                            <option value="10">Avengers: Endgame ($10)</option>
+                    <label for="select-movie-z" onchange="calculateTotalPrice()" class="fs-2 mt-2">Pick a movie:<br>
+                        <select class="form-select input-movie-select-z" id="select-movie-z" aria-label="Default select example">
+                            <option value="10">The Secret Life of Walter Mitty ($10)</option>
+                            <option value="8">Inception ($8)</option>
                             <option value="12">Joker ($12)</option>
-                            <option value="8">Toy Story 4 ($8)</option>
-                            <option value="9">The Lion King ($9)</option>
+                            <option value="9">Interstellar ($9)</option>
+                            <option value="11">Jason Bourne ($11)</option>
+                            <option value="7">John Wick 2 ($7)</option>
                         </select>
                     </label>
                 </div>
 
-<!--                Enter the contact email-->
-                <div>
-                    <label for="book-email-z">Contact Detail:<br>
-                        <input type="email" id="book-email-z" size="20" placeholder="Your Email Address">
-                    </label>
+<!-- Enter the contact email-->
+                <div class="mb-3">
+                    <label for="input-email-z" class="form-label fs-3 mt-2">Email address</label>
+                    <input type="email" class="form-control input-email-z" id="input-email-z" placeholder="name@example.com">
                 </div>
-                <p>Total: </p>
-<!--                Submit button-->
-                <button class="btn btn-warning"> Review and Pay</button>
+<!-- Total price -->
+                <p class="fs-3 mt-2">Total: <span id="total-price-z"></span></p>
+<!-- Submit button-->
+                <button type="submit" class="btn btn-warning" > Review and Book</button>
             </form>
-
         </div>
+        <div class="col-lg-2"></div>
+        
     </div>
 </div>
-</div>
+<div class="footer-devider-z"></div>
+ <!-- Footer -->
+ <footer class="bg-dark text-white text-center text-lg-start ">
+    <div class="container p-4">
+        <div class="row py-5">
+            <div class="col-lg-4 mb-5 text-center">
+                <img src="../images/logo.svg" alt="logo" width="200">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Pumpkin Cinema</h5>
+                <p>
+                    Pumpkin Cinema is a cinema located in Dublin, Ireland. It was opened in 2021, and is one of the
+                    most modern cinemas in the world.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
 
-
-<script type="text/javascript">
-    var nav = document.querySelector('nav');
-    window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 100) {
-            nav.classList.add('bg-dark', 'shadow');
-        } else {
-            nav.classList.remove('bg-dark', 'shadow');
-        }
-    });
-</script>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="tel:012345678" class="text-white">Phone: 01 234 5678</a>
+                    </li>
+                    <li>
+                        <a href="mailto:pumpkinCinema@gmail.com" class="text-white">Email:
+                            pumpkinCinema@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps/place/National+College+of+Ireland/@53.3489292,-6.2455677,17z/data=!3m1!4b1!4m6!3m5!1s0x48670e8cd86e97e7:0x6d51b774ee7fa935!8m2!3d53.3489292!4d-6.2429928!16s%2Fm%2F0269tk2?entry=ttu"
+                            class="text-white">Address: 123 Main Street, Dublin, Ireland</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center">© Pumpkin Cinema 2023</p>
+    </div>
+</footer>
 <script src="../js/main.js"></script>
 </body>
 </html>
