@@ -1,5 +1,6 @@
 body {
   background: url('../images/background.jpg') no-repeat center center fixed;
+  /* Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/funny-bright-jack-o-lantern_1323391.htm" */
   background-size: cover;
   min-height: 100vh;
 }
@@ -51,14 +52,38 @@ body {
 /* Change navbar styling on small viewports */
 @media (max-width: 990px) {
   .navbar {
-      background: #0E141B;
+    background: #0E141B;
   }
 
-  .navbar .navbar-brand, .navbar .nav-link {
-      color: #fff;
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #fff;
   }
 }
-/* -------------------- NAVBAR CSS - GLOBAL - END------------------------------- */
+
+/* -------------------- Membership Page CSS - @Bintong -------------------- */
+.membership-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+}
+
+.registration-submit {
+  background-color: #FF770E;
+  border-color: #FF770E;
+  color: white;
+  padding: 8px 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+.main-text-b {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* -------------------- END ------------------------------- */
+
 
 /* -------------------- HOME PAGE CSS - @yinglian Deng -------------------- */
 .carousel {
@@ -378,4 +403,96 @@ form .form-control::-webkit-input-placeholder {
 .btn:hover {
   color: #ffffff;
 }
+
 /* -------------------- ABOUT US PAGE CSS - END -------------------- */
+
+/* -------------------- Eat & Drink Page CSS - @Bintong -------------------- */
+.eat-and-drink-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+  margin-top: 6rem;
+}
+
+.eat-and-drink-buttons {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.menu-card {
+  height: 100%
+}
+
+.card-body {
+  opacity: 0.8;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slider-container {
+  padding: 0.5rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.slider-b {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+
+.slider-b img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.menu-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+}
+
+.menu-line {
+  border-top: 6px dotted #FF770E;
+  margin-left: 9rem;
+  margin-right: 9rem;
+}
+
+/* --------------------------------------------------- */
