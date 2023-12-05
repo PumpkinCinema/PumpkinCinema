@@ -60,21 +60,10 @@ body {
 }
 /* --------------------------------------------------- */
 
-
-
-
-.banner-image {
-    background-image: url('../images/jokerr.png');
-    background-size: cover;
-    background-position: center center;
-}
-
-.btn-primary {
-    background-color: #FF770E !important;
-    border-color: #FF770E !important;
- }
-
 /* ---- CSS for BookTicket and WhatsOn , Zhenghao---------------------------*/
+
+
+
 
 .devider-z{
   margin-top: 100px;
@@ -84,8 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 350px;
+  height: 400px;
 }
 
 
@@ -101,14 +89,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 450px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .select-screen-z {
   background-color: #fff;
-  height: 100px;
-  width: 230px;
+  height: 130px;
+  width: 300px;
   margin: 15px 0;
   transform: rotateX(-30deg);
   box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
@@ -123,9 +111,9 @@ body {
 
 .seat-z {
   background-color: #444451;
-  height: 12px;
-  width: 15px;
-  margin: 3px;
+  height: 15px;
+  width: 20px;
+  margin: 5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -174,8 +162,18 @@ body {
   overflow: auto;
 }
 
+.input-email-z, .input-movie-select-z {
+  width: 230px;
+}
 
-.btn-warning {
+.footer-devider-z {
+  margin-top: 300px;
+}
+.movie-list-z {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-warning , bg-warning {
   background-color: #ff770e;
   border-color: #ff770e;
   color: white;
@@ -196,6 +194,23 @@ body {
   color: white;
 }
 
+.movie-poster-z {
+  max-width: 180px;
+  min-width: 180px;
 
+}
+
+.movie-card-z:hover {
+  background-color: rgba(0, 0, 0, 0.56);
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45),
+  25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+  0px 25px 20px -20px rgba(0, 0, 0, 0.45),
+  -25px 0px 20px -20px rgba(0, 0, 0, 0.45);
+  padding-top:30px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+
+/* ---- BookTicket and WhatsOn End , Zhenghao---------------------------*/
 
 

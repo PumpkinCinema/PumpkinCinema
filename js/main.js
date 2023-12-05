@@ -34,20 +34,24 @@ $(function () {
 // The scroll event of the window is also being listened to. When the window is scrolled and the scroll distance is more than 10, the active class is added to elements with the navbar class. If the scroll distance is less than or equal to 10, the active class is removed.
 
 
-// JS for the BookTicket page 
-window.onload = () => {
+// JS for the BookTicket and WhatsOn page
+window.onload = function(){
     for(let i = 0; i < 8; i++){
         let date = new Date();
         date.setDate(date.getDate() + i);
         document.getElementById("select-day" + (i + 1) + "-z").innerHTML = date.toDateString().split(" ")[1] + " " + date.toDateString().split(" ")[2];
     }
-    // return true;
+    return true;
 }
 
 //seat click event
 const selectBox = document.querySelector(".select-zone-z");
 const pickedSeat = document.getElementById("picked-seat-z");
+const totalPrice = document.getElementById("total-price-z");
+const selectMovie = document.getElementById("select-movie-z");
+const picked=[];
 
+// seat click event
 selectBox.addEventListener("click",
     e => {
         if (
@@ -57,19 +61,50 @@ selectBox.addEventListener("click",
             e.target.classList.toggle("seat-selected-z");
         }
 
-        const picked = [];
         let seats = document.getElementsByClassName("seat-selected-z");
+        picked.length = 0;  //reset array
         for (let i = 0; i < seats.length; i++) {
             picked[i] = seats[i].getAttribute("data-value") + " ";
         }
+        
         pickedSeat.innerText = picked.toString();
-
+        calculateTotalPrice();
 
     });
 
+function calculateTotalPrice() {
+    let moviePrice = selectMovie.options[selectMovie.selectedIndex].value;
+    totalPrice.innerText = picked.length * moviePrice;
+}
 
+// if user select a movie, then click ok, then turn to booking page
+function toBooking(){
+    let x = confirm("Do you want to buy ticket for this movie?");
+    if(x == true){
+        window.location.href="BookTicket.html";
+    }
+}
 
+let form = document.querySelector('form');
+const email = document.getElementById("input-email-z");
 
- 
+// Add a submit event listener to the form,
+// validate the email,
+// validate the seat selection
+form.addEventListener('submit', (event) => {
 
-// JS for the WhatsOn page 
+    let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+    let s = email.value;
+
+    if (!regex.test(s)) {
+        event.preventDefault();
+        alert("Invalid Email");
+
+    }else if(picked.length == 0){
+        alert("Please select seats.");
+
+    }else{
+       alert("Booking Success!")
+    }
+
+});
