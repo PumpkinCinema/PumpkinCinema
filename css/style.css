@@ -1,9 +1,12 @@
 body {
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    min-height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  /* Freepik. Accessed December 2, 2023. Retrieved from "https://www.freepik.com/free-photo/funny-bright-jack-o-lantern_1323391.htm" */
+  background-size: cover;
+  min-height: 100vh;
 }
 
-/* -------------------- NAVBAR CSS -------------------- */
+/* -------------------- NAVBAR CSS - GLOBAL - @Yinlian Deng-------------------- */
+
 .navbar {
   transition: all 0.4s;
 }
@@ -26,7 +29,6 @@ body {
   color: #FF770E;
 }
 
-
 /* Change navbar styling on scroll */
 .navbar.active {
   background: #0E141B;
@@ -47,24 +49,456 @@ body {
   color: #FF770E;
 }
 
-
 /* Change navbar styling on small viewports */
 @media (max-width: 990px) {
   .navbar {
-      background: #0E141B;
+    background: #0E141B;
   }
 
-  .navbar .navbar-brand, .navbar .nav-link {
+  .navbar .navbar-brand,
+  .navbar .nav-link {
     color: #fff;
-  }   
+  }
 }
-/* --------------------------------------------------- */
+
+/* -------------------- Membership Page CSS - @Bintong -------------------- */
+.membership-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+}
+
+.registration-submit {
+  background-color: #FF770E;
+  border-color: #FF770E;
+  color: white;
+  padding: 8px 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+.main-text-b {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* -------------------- END ------------------------------- */
+
+
+/* -------------------- HOME PAGE CSS - @yinglian Deng -------------------- */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-indicators {
+  bottom: 3rem !important;
+}
+
+.l-textfont {
+  font-family: 'Playfair Display', serif;
+  width: 45rem;
+}
+
+.l-textdecor {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 6px 50px;
+}
+
+/* Change carousel style on responsive size */
+@media (min-width: 30em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .carousel-item {
+    height: auto;
+  }
+}
+
+@media (min-width: 62em) {
+  .carousel-caption {
+    bottom: 4.5rem;
+  }
+
+  .carousel-item {
+    height: auto;
+  }
+}
+
+.text-bg-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+}
+
+.postcard a {
+  text-decoration: none;
+}
+
+.postcard.dark {
+  background-color: #18151f;
+}
+
+.postcard .t-dark {
+  color: #18151f;
+}
+
+.postcard a {
+  color: inherit;
+}
+
+.postcard h1,
+.postcard .h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.postcard .small {
+  font-size: 80%;
+}
+
+.postcard .postcard-title {
+  font-size: 1.75rem;
+}
+
+.postcard .postcard-img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.postcard .postcard-img_link {
+  display: contents;
+}
+
+.postcard .postcard-bar {
+  width: 50px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+
+.postcard .postcard-text {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.postcard .postcard__preview-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+}
+
+.postcard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.postcard:hover .postcard-bar {
+  width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+  }
+
+  .postcard .postcard-img {
+    max-width: 300px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .postcard .postcard-text {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .postcard .media.postcard-text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #18151f;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+
+  .postcard:hover .postcard-img {
+    transform: scale(1.1);
+  }
+
+  .postcard:nth-child(2n+1) {
+    flex-direction: row;
+  }
+
+  .postcard:nth-child(2n+0) {
+    flex-direction: row-reverse;
+  }
+
+  .postcard:nth-child(2n+1) .postcard-text::before {
+    left: -12px !important;
+    transform: rotate(4deg);
+  }
+
+  .postcard:nth-child(2n+0) .postcard-text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .postcard-text {
+    padding: 2rem 3.5rem;
+  }
+
+  .postcard-text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+
+  .postcard.dark .postcard-text:before {
+    background: #18151f;
+  }
+}
+
+.postcard .postcard__tagbox .l-orange .play:hover {
+  background: #FF770E;
+}
+
+.postcard-title:hover {
+  color: #FF770E;
+}
+
+.l-orange .postcard-bar {
+  background-color: #FF770E;
+}
+
+.l-orange::before {
+  background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+}
+
+.l-orange:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+  background: #bd150b;
+}
+
+.l-title-font {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* -------------------- HOME PAGE CSS - END -------------------- */
+
+
+/* -------------------- ABOUT US PAGE CSS - @yinglian Deng -------------------- */
+.l-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #FF770E;
+}
+
+.l-contactbg {
+  background: url('../images/lcinema.jpg') no-repeat center center fixed;
+  min-height: 100vh;
+}
+
+.l-conform {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* contact us form css */
+.l-card {
+  margin-bottom: 80px;
+}
+
+textarea[name="message"] {
+  resize: none;
+}
+
+#e-mail {
+  height: 45px;
+}
+
+#message {
+  height: 120px;
+}
+
+input.input-box,
+textarea.input-box {
+  background-color: #616161;
+  border: #616161;
+  color: #BDBDBD;
+}
+
+input.input-box:focus,
+textarea.input-box:focus {
+  background-color: #000000;
+  color: #BDBDBD;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #9E9E9E;
+}
+
+.btn-purple {
+  padding: 10px 50px;
+  background-color: #FF770E;
+  color: #ffffff;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+/* -------------------- ABOUT US PAGE CSS - END -------------------- */
+
+/* -------------------- Eat & Drink Page CSS - @Bintong -------------------- */
+.eat-and-drink-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+  margin-top: 6rem;
+}
+
+.eat-and-drink-buttons {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.menu-card {
+  height: 100%
+}
+
+.card-body {
+  opacity: 0.8;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slider-container {
+  padding: 0.5rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.slider-b {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+
+.slider-b img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.menu-title {
+  color: #FF770E;
+  font-family: 'Crimson Text', serif;
+}
+
+.menu-line {
+  border-top: 6px dotted #FF770E;
+  margin-left: 9rem;
+  margin-right: 9rem;
+}
+/* -------------------------END-------------------------- */
+
+
 
 /* ---- CSS for BookTicket and WhatsOn , Zhenghao---------------------------*/
-
-
-
-
 .devider-z{
   margin-top: 100px;
 }
@@ -211,6 +645,4 @@ body {
   border-radius: 20px;
 }
 
-/* ---- BookTicket and WhatsOn End , Zhenghao---------------------------*/
-
-
+/* --------------------------End---------------------------*/
