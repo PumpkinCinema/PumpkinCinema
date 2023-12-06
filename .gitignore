@@ -2,3 +2,7 @@
 .idea/.name
 .DS_Store
 images/.DS_Store
+.idea/vcs.xml
+.idea/modules.xml
+.idea/PumpkinCinema.iml
+.idea/workspace.xml
