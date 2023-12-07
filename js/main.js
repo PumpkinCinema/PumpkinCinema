@@ -164,14 +164,12 @@ function eatAndDrinkDiscount() {
 
 // JS for the BookTicket and WhatsOn page -- @Zhenghao-Cui
 
-//seat click event
+// seat click event
+// reference: https://codepen.io/about7codes/pen/gOpopBL 
 const selectBox = document.querySelector(".select-zone-z");
 const pickedSeat = document.getElementById("picked-seat-z");
-const totalPrice = document.getElementById("total-price-z");
-const selectMovie = document.getElementById("select-movie-z");
 const picked = [];
 
-// seat click event
 selectBox.addEventListener("click",
     e => {
         if (
@@ -182,15 +180,21 @@ selectBox.addEventListener("click",
         }
 
         let seats = document.getElementsByClassName("seat-selected-z");
+// seat click event reference end 
+
         picked.length = 0;  //reset array
         for (let i = 0; i < seats.length; i++) {
-            picked[i] = seats[i].getAttribute("data-value") + " ";
+            picked[i] = " " + seats[i].getAttribute("data-value");
         }
 
         pickedSeat.innerText = picked.toString();
         calculateTotalPrice();
 
     });
+
+// calculate total price
+const selectMovie = document.getElementById("select-movie-z");
+const totalPrice = document.getElementById("total-price-z");
 
 function calculateTotalPrice() {
     let moviePrice = selectMovie.options[selectMovie.selectedIndex].value;
@@ -211,6 +215,7 @@ const emailz = document.getElementById("input-email-z");
 // Add a submit event listener to the form,
 // validate the email,
 // validate the seat selection
+// reference: https://www.geeksforgeeks.org/form-validation-using-jquery 
 form.addEventListener('submit', (event) => {
 
     let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
