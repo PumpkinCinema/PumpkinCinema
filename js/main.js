@@ -32,6 +32,7 @@ function aboutUsForm() {
     event.preventDefault(); // Prevent form submission
 
     let emailRegex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+    // Simplilearn. (n.d.). Email Validation in JavaScript. Simplilearn. Retrieved December 01, 2023, from https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript 
     let emailValue = email.value;
     let emailError = false;
 
