@@ -184,7 +184,7 @@ selectBox.addEventListener("click",
 
         picked.length = 0;  //reset array
         for (let i = 0; i < seats.length; i++) {
-            picked[i] = seats[i].getAttribute("data-value") + " ";
+            picked[i] = " " + seats[i].getAttribute("data-value");
         }
 
         pickedSeat.innerText = picked.toString();
