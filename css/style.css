@@ -434,6 +434,7 @@ form .form-control::-webkit-input-placeholder {
   object-fit: cover;
 }
 
+/*Skillthrive, YouTube. Retrieved December 02, 2023, from https://www.youtube.com/watch?v=McPdzhLRzCg */
 .slider-container {
   padding: 0.5rem;
 }
@@ -527,6 +528,16 @@ form .form-control::-webkit-input-placeholder {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.select-date-z {
+
+  display: flex;
+  width: 230px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* seat click event
+reference: https://codepen.io/about7codes/pen/gOpopBL  */
 .select-screen-z {
   background-color: #fff;
   height: 130px;
@@ -534,13 +545,6 @@ form .form-control::-webkit-input-placeholder {
   margin: 15px 0;
   transform: rotateX(-30deg);
   box-shadow: rgba(255, 255, 255, 0.7) 0px 5px 20px;
-}
-.select-date-z {
-
-  display: flex;
-  width: 230px;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .seat-z {
@@ -586,6 +590,7 @@ form .form-control::-webkit-input-placeholder {
   color: #777;
   justify-content: center;
 }
+/* seat click event reference end */
 
 .seat-row-z {
   display: flex;
